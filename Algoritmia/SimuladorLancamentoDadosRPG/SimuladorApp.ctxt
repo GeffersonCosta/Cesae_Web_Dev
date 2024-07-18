@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=SimuladorApp
+comment1.params=
+comment1.target=SimuladorApp()
+comment2.params=
+comment2.target=void\ pedidoLancamento()
+comment3.params=
+comment3.target=void\ relancamentoDado()
+comment4.params=generoDeDadoALancar
+comment4.target=void\ escrevaResultado(int)
+numComments=5
