@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=EntradaCinema
+comment1.params=
+comment1.target=EntradaCinema()
+comment2.params=idade
+comment2.target=void\ validadorIdade(int)
+numComments=3

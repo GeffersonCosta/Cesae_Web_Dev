@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 class SimuladorApp{
     Scanner scanNumeroUtilizador = new Scanner(System.in);
+    Scanner scanTextoUtilizador = new Scanner(System.in);
     Random objetoNumeroAleatorio = new Random();
     
     SimuladorApp(){
@@ -47,6 +48,22 @@ class SimuladorApp{
         int resultadoDoLancamento = objetoNumeroAleatorio.nextInt(generoDeDadoALancar) + 1;
         
          System.out.println("O resultado do lançamento foi: "+ resultadoDoLancamento);
+         System.out.println("Deseja fazer mais algum lançamento? Escreva sim para lançar outro dado");
+         System.out.println("Caso contrário, escreva outra coisa qualquer.");
+         
+         
+         // equals() faz comparação boolean 
+         /*if(scanNumeroUtilizador.next().intern() == "sim"){
+             relancamentoDado();
+            }*/
+            
+            if(scanNumeroUtilizador.next().equalsIgnoreCase("sim")){
+              relancamentoDado();
+            }
+            else{
+                    System.out.println("Encerrando programa!");
+            }
+            
     }
     
 

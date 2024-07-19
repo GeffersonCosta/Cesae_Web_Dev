@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=IndiceMassaCorporal
+comment1.params=
+comment1.target=IndiceMassaCorporal()
+comment2.params=peso\ altura
+comment2.target=void\ calcular(float,\ float)
+numComments=3
