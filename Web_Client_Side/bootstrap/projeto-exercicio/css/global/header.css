@@ -1,0 +1,36 @@
+header nav {
+  background: linear-gradient(#323238, #373442);
+}
+header nav h1 {
+  text-shadow: 5px 5px 5px black;
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  padding-right: 20px;
+}
+header .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+header li {
+  position: relative;
+}
+/*Efeito underline no link do header*/
+@media (min-width: 992px) {
+  header a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+  }
+  header a:hover::after {
+    width: 90%;
+    transition: 0.3s;
+  }
+}
+@media (max-width: 992px) {
+  header li a:hover {
+    text-decoration: underline;
+  }
+}
