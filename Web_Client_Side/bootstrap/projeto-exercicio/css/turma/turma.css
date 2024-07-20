@@ -1,0 +1,24 @@
+.main-div-principal img{
+  opacity: unset;
+}
+.container-grid{
+  display: grid;
+  grid-template-columns: auto;
+  margin: 0 auto;
+  gap: 20px;
+  padding: 40px;
+  border: 1px solid red;
+}
+ .turma img{
+  max-width: 100%;
+  object-fit: cover;
+}
+.hitoria-turma{
+  align-self: center;
+  color: #ffffff;
+  max-width: 70ch;
+}
+.hitoria-turma p{
+  font-size: 1.5rem;
+  padding-top: 20px;
+}

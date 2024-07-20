@@ -1,7 +1,18 @@
+footer .principal{
+  bottom:0;
+  left: 0;
+  width: 100%;
+}
 .footer-div{
   padding: 30px;
   background-color: #000000;
 }
 .footer-div a{
   color: #ffff;
+  text-decoration: none;
+}
+footer .turma{
+ bottom:0;
+ left: 0;
+ width: 100%;
 }
