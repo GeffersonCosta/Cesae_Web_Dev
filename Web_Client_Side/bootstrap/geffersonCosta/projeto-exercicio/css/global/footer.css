@@ -1,0 +1,15 @@
+footer{
+  width: 100%;
+  bottom:0;
+  left: 0;
+  color: #ffffff;
+  border: 1px solid #000000;
+}
+.footer-div{
+  background-color: #000000;
+  padding: 20px;
+}
+.footer-div a{
+  color: #ffff;
+  text-decoration: none;
+}

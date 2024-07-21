@@ -1,0 +1,102 @@
+main {
+  background-color: black;
+}
+.main-div-principal {
+  width: 915px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+}
+.main-div-principal img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  border-radius: 0px 0px 5px 5px;
+}
+.main-div-principal .descricao-img {
+  background-color: #0000005a;
+  position: absolute;
+  z-index: 1;
+  bottom: 40px;
+  width: 100%;
+  padding: 0px 0px 15px 15px;
+  filter: drop-shadow(0 0 1rem rgba(209, 200, 188, 0.329));
+  box-shadow: 1px 1px 1rem rgba(197, 194, 189, 0.159);
+  
+}
+.descricao-img a,
+span {
+  color: #ffffff;
+}
+.descricao-img {
+ display: grid;
+  border-radius: 0px 0px 5px 5px;
+}
+.descricao-img span {
+  font-size: 3.12rem;
+  font-family: "Playfair";
+  font-weight: 700;
+}
+.descricao-img a, .backgroud-main-section-secundaria a {
+  padding-top: 20px;
+  font-size: 1.56rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+ .descricao-img a {
+  text-decoration: none;
+}
+.main-div-principal img {
+  opacity: 0.9;
+}
+.backgroud-main-section-secundaria .descricao-img a{
+  color: #ffffff;
+}
+.descricao-img a:hover{
+  text-shadow: 5px 5px 5px #555b6d;
+  color: #16a2de;
+}
+.main-div-principal:hover img {
+  opacity: unset;
+}
+.backgroud-main-section-primaria {
+  box-shadow: inset 0 -120px white;
+}
+.backgroud-main-section-secundaria {
+  background-color: #ffffff;
+  padding-bottom: 40px;
+}
+.backgroud-main-section-secundaria img{
+  max-width:100%;
+  height: 300px;
+}
+.backgroud-main-section-secundaria .cardes-noticias{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+}
+@media (max-width: 800px) {
+  .descricao-img span{
+    font-size: 1.4rem;
+  }
+  .descricao-img a {
+    font-size: 1.2rem;
+  }
+}
+@media(max-width: 930px) {
+  .backgroud-main-section-secundaria .cardes-noticias{
+    grid-template-columns: auto auto;
+  }
+}
+@media(max-width: 630px) {
+  .backgroud-main-section-secundaria .cardes-noticias{
+    grid-template-columns: 1fr;
+  }
+  .main-div-principal{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .main-div-principal .descricao-img{
+    bottom: 21px;
+  }
+ 
+}
