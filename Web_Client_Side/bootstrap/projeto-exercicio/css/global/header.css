@@ -37,3 +37,8 @@ header li {
     text-decoration: underline;
   }
 }
+@media (max-width: 630px) {
+ header nav h1{
+  font-size: 1.5rem;
+ }
+}
