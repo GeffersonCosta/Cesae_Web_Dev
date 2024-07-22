@@ -3,9 +3,6 @@
   display: grid;
   gap: 20px;
 }
-.contato-pg{
-  border: 1px solid red;
-}
 .form {
   background-color: #ffffff;
   padding: 60px;
@@ -45,7 +42,6 @@ label {
   max-width: 950px;
   height: 729px;
   margin: 0 auto;
-  border: 1px solid red;
 }
 .formulario h1{
   padding-bottom: 23px;
