@@ -3,10 +3,14 @@
   display: grid;
   gap: 20px;
 }
+.contato-pg{
+  border: 1px solid red;
+}
 .form {
   background-color: #ffffff;
   padding: 60px;
   border-radius: 5px;
+  border: 1px solid green;
 }
 .form input[type="text"],
 .form input[type="email"],
@@ -29,7 +33,6 @@
 .form input[type="email"]{
   grid-column: 1/-1;
 }
-
 button {
   text-transform: uppercase;
 }
@@ -38,18 +41,18 @@ label {
   font-weight: bold;
 }
 .formulario {
-  padding: 60px;
+  padding: 30px;
   max-width: 950px;
+  height: 729px;
   margin: 0 auto;
+  border: 1px solid red;
 }
 .formulario h1{
   padding-bottom: 23px;
 }
 footer .contato{
   border: 1px solid black;
-  position: fixed;
   width: 100%;
-  bottom: 0;
 }
 @media(max-width:650px){
   .form{
@@ -59,7 +62,7 @@ footer .contato{
     position: inherit;
   }
   .formulario {
-    padding: 0px;
+    padding: 30px;
   }
   .formulario h1{
     font-size: 1.3rem;

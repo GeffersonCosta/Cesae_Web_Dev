@@ -19,7 +19,17 @@ class Aventura
             System.out.println("José entrou na localização certa e ficou vivo");
             
         }else{
-            System.out.println("José entrou na localização errada e foi comido por leões");
+            if(escolha.equalsIgnoreCase("Sul")){
+                System.out.println("José entrou na localização errada e foi comido por leões");
+            }
+            else{
+                if(escolha.equalsIgnoreCase("Este")){
+                   System.out.println("José entrou na localização errada e foi comido por jacares");
+                }else{
+                    System.out.println("José entrou na localização errada e foi comido por sucuri"); 
+                }
+                
+            }
             System.out.println("Tente novamente em outra direção:");
             tentarSair(scanEscolhaUsuario.next()); 
         }

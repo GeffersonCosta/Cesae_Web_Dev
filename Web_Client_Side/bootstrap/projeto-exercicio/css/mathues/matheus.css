@@ -1,0 +1,9 @@
+@media(max-width:650px){
+  .img-matheus{
+    max-width: 100%;
+    max-height: 310px;
+    display: block;
+    margin: 0 auto;
+  }
+
+}

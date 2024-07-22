@@ -41,7 +41,9 @@ label {
   padding: 60px;
   max-width: 950px;
   margin: 0 auto;
- 
+}
+.formulario h1{
+  padding-bottom: 23px;
 }
 footer .contato{
   border: 1px solid black;
@@ -58,6 +60,10 @@ footer .contato{
   }
   .formulario {
     padding: 0px;
+  }
+  .formulario h1{
+    font-size: 1.3rem;
+    padding: 20px;
   }
   .form {
     padding: 30px;
