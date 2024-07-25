@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ClasseB
+comment1.params=
+comment1.target=ClasseB()
+comment2.params=valor1\ valor2\ validacao
+comment2.target=void\ calcular(int,\ int,\ java.lang.String)
+numComments=3
