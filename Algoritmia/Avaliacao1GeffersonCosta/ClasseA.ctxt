@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ClasseA
+comment1.params=
+comment1.target=ClasseA()
+comment2.params=valorUser
+comment2.target=void\ conversorKmParaMilhas(float)
+numComments=3

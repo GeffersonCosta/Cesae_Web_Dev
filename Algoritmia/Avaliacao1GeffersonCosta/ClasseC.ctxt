@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ClasseC
+comment1.params=
+comment1.target=ClasseC()
+comment2.params=valorUsuario\ valorSistema
+comment2.target=void\ verificarAcerto(int,\ int)
+numComments=3
