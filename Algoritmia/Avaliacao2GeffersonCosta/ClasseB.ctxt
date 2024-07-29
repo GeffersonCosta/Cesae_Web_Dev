@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ClasseB
+comment1.params=
+comment1.target=ClasseB()
+comment2.params=nomeClube
+comment2.target=void\ IniciarGame(java.lang.String)
+numComments=3
