@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Carta
+comment1.params=
+comment1.target=Carta()
+comment2.params=n\ r
+comment2.target=Carta(java.lang.String,\ java.lang.String)
+comment3.params=n\ r
+comment3.target=Carta(int,\ int)
+numComments=4
