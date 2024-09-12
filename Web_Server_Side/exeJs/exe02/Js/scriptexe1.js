@@ -1,17 +1,8 @@
 let listBuy = [];
 
-
-
-
-
-
-
-
 var itens = "";
 function addList() {
   itens = document.getElementById("itensUser").value;
-  
-
   
   if (itens != "") {
     itens = document.getElementById("itensUser").value = "";
