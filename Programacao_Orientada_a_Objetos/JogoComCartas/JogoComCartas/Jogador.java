@@ -1,19 +1,30 @@
+import java.util.ArrayList;
 
+// extends é uma keyword que implementa o conceito de Herança(Inheritance)
 public class Jogador extends Utilizador
 {
-    double cash;
+
     int pontos;
+    String nomeNoJogo;
+    Carta cartaDoJogador;
+    
+    ArrayList<Carta> maoJogador = new ArrayList();
     
    
-    public Jogador()
-    {
+    public Jogador(){
        
     }
-    /*public Jogador(double cash, int pontos, int id, String username, String email)
-    {
+    
+    void comprarCarta(){
         
-       
-    }*/
+    }
+    void descartarCarta(){
+        
+    }
+    void mostrarMao(){
+        
+    }
+   
 
     
 }

@@ -2,4 +2,10 @@
 comment0.target=Utilizador
 comment1.params=
 comment1.target=Utilizador()
-numComments=2
+comment2.params=paramUserName\ paramPassword
+comment2.target=void\ fazerLogin(java.lang.String,\ java.lang.String)
+comment3.params=
+comment3.target=void\ fazerLogout()
+comment4.params=
+comment4.target=void\ fazerRegistro()
+numComments=5
