@@ -52,6 +52,7 @@ public class SalaJogoPoker
             }
         }
         baralhoCheio = true;
+        System.out.println("Baralho Criado com Sucesso!");
 
     }
 
@@ -60,13 +61,9 @@ public class SalaJogoPoker
             System.out.println("Baralho Vazio");
         }
         else{
-            for(int i = 0; i < carta.arrayNaipes.length; i++)
+            for(int i = 0; i < novoBaralho.size(); i++)
             {
-                for(int j = 0; j < carta.arrayRanks.length; j++)
-                {
-                    System.out.println(novoBaralho.get(i).arrayNaipes[i] + novoBaralho.get(j).rank);
-
-                }
+                System.out.println(novoBaralho.get(i).naipe + novoBaralho.get(i).rank);
             }
         }
     }
@@ -85,10 +82,9 @@ public class SalaJogoPoker
     {
         if(baralhoCheio){
             for(int i=0; i < 3; i++){
-                int naipeAleatorio = rand.nextInt(3);
-                int rankAleatorio = rand.nextInt(13);
-                System.out.println("Saiu o "+ novoBaralho.get(naipeAleatorio).arrayNaipes[naipeAleatorio] +  " " +  novoBaralho.get(rankAleatorio).rank);
-                novoBaralho.remove(rankAleatorio);
+                int saidaDeCartasAleatorias = rand.nextInt(novoBaralho.size());
+                System.out.println("Saiu o "+ novoBaralho.get(saidaDeCartasAleatorias).naipe +  " " +  novoBaralho.get(saidaDeCartasAleatorias).rank);
+                novoBaralho.remove(saidaDeCartasAleatorias);
 
             }
         }
