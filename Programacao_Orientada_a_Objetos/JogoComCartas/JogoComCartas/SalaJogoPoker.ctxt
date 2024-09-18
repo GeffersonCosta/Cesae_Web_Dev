@@ -16,4 +16,6 @@ comment7.params=
 comment7.target=void\ numeroDeItensNaLista()
 comment8.params=
 comment8.target=void\ flop()
-numComments=9
+comment9.params=
+comment9.target=void\ todosJogodoresCompramUmaCarta()
+numComments=10

@@ -8,14 +8,17 @@ public class Jogador extends Utilizador
     String nomeNoJogo;
     Carta cartaDoJogador;
     
-    ArrayList<Carta> maoJogador = new ArrayList();
+    ArrayList<Carta> cartasNaMao;
     
    
     public Jogador(){
        
+        cartasNaMao = new ArrayList();
     }
     
-    void comprarCarta(){
+    void comprarCarta(Carta paramCarta){
+        
+        cartasNaMao.add(paramCarta);
         
     }
     void descartarCarta(){

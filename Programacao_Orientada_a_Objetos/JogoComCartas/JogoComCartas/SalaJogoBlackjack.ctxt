@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=SalaJogoBlackjack
+comment1.params=
+comment1.target=SalaJogoBlackjack()
+comment2.params=
+comment2.target=void\ criarBaralho()
+comment3.params=
+comment3.target=void\ mostrarListaCarta()
+numComments=4

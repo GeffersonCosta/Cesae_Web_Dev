@@ -2,8 +2,8 @@
 comment0.target=Jogador
 comment1.params=
 comment1.target=Jogador()
-comment2.params=
-comment2.target=void\ comprarCarta()
+comment2.params=paramCarta
+comment2.target=void\ comprarCarta(Carta)
 comment3.params=
 comment3.target=void\ descartarCarta()
 comment4.params=

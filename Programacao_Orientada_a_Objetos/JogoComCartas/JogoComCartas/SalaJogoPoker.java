@@ -23,6 +23,7 @@ public class SalaJogoPoker
         jogadorPoker = new Jogador();
         jogadorPoker.nomeNoJogo = "Player_"+cont;
         listaJogadores.add(jogadorPoker);
+        System.out.println(jogadorPoker.nomeNoJogo);
 
     }
 
@@ -69,12 +70,7 @@ public class SalaJogoPoker
     }
 
     void numeroDeItensNaLista(){
-        int cont = 0;
-        for(int i = 0; i < novoBaralho.size(); i++)
-        {
-            cont++;
-        }
-        System.out.println(cont);
+        System.out.println(novoBaralho.size());
     }
 
 
@@ -83,7 +79,9 @@ public class SalaJogoPoker
         if(baralhoCheio){
             for(int i=0; i < 3; i++){
                 int saidaDeCartasAleatorias = rand.nextInt(novoBaralho.size());
-                System.out.println("Saiu o "+ novoBaralho.get(saidaDeCartasAleatorias).naipe +  " " +  novoBaralho.get(saidaDeCartasAleatorias).rank);
+                carta = novoBaralho.get(saidaDeCartasAleatorias);
+                System.out.println("Saiu o "+ carta.naipe +  " " +  carta.rank);
+               // System.out.println("Saiu o "+ novoBaralho.get(saidaDeCartasAleatorias).naipe +  " " +  novoBaralho.get(saidaDeCartasAleatorias).rank);
                 novoBaralho.remove(saidaDeCartasAleatorias);
 
             }
@@ -92,6 +90,22 @@ public class SalaJogoPoker
             System.out.println("Baralho Vazio");
         }
 
-    }    
+    }
+    
+    void todosJogodoresCompramUmaCarta(){
+        
+         for(int i=0; i < listaJogadores.size(); i++){
+                int saidaDeCartasAleatorias = rand.nextInt(novoBaralho.size());
+                carta = novoBaralho.get(saidaDeCartasAleatorias);
+                novoBaralho.remove(saidaDeCartasAleatorias);
+                listaJogadores.get(i).comprarCarta(carta);
+
+            }
+        System.out.println("Todos os jogadores compraram uma carta.");
+        
+        
+    }
+    
+ 
     
 }
