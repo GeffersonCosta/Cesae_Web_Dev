@@ -23,7 +23,7 @@ public class AtividadeA
         
        
     } 
-    String numeroSorteado(){
+    void numeroSorteado(){
         numerosGrela();
         int valor1 = 0;
         int valor2 = 0;
@@ -31,19 +31,21 @@ public class AtividadeA
         int valor4 = 0;
         int valor5 = 0;
         
-        for(int i = 0; i <= 5; i++){
+        for(int i = 0; i < 5; i++){
             int valorSorteado = grelhaNumeros.get(numerosAleatorios.nextInt(grelhaNumeros.size()));
             
             if(!numerosSorteados.contains(valorSorteado)){
                 numerosSorteados.add(valorSorteado);
+                valor1 = numerosSorteados.get(i);
+                System.out.println(valor1);
             } 
         }
-        valor1 = numerosSorteados.get(0);
+        /*valor1 = numerosSorteados.get(0);
         valor2 = numerosSorteados.get(1);
         valor3 = numerosSorteados.get(2);
         valor4 = numerosSorteados.get(3);
-        valor5 = numerosSorteados.get(4);
-        return "Números: "+valor1+","+valor2+","+valor3+","+valor4+","+valor5;
+        valor5 = numerosSorteados.get(4);*/
+        //return "Números: "+valor1+","+valor2+","+valor3+","+valor4+","+valor5;
         
         
     }
@@ -65,7 +67,7 @@ public class AtividadeA
     
     void euromilhoes(){
         System.out.println("Chave do Euromilhôes");
-        System.out.println(numeroSorteado());
+        //System.out.println(numeroSorteado());
         System.out.println(estrelaSorteado());
     }
     

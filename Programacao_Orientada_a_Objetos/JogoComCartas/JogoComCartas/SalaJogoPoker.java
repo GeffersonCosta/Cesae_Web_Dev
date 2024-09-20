@@ -21,6 +21,7 @@ public class SalaJogoPoker
 
         cont++;
         jogadorPoker = new Jogador();
+        jogadorPoker.setPontos(10);
         jogadorPoker.nomeNoJogo = "Player_"+cont;
         listaJogadores.add(jogadorPoker);
         System.out.println(jogadorPoker.nomeNoJogo);
@@ -102,9 +103,27 @@ public class SalaJogoPoker
 
             }
         System.out.println("Todos os jogadores compraram uma carta.");
-        
+    }
+    
+    
+    void todosOsJogadoresMostramASuaMao(){
+        for(int i = 0; i<listaJogadores.size(); i++){
+            listaJogadores.get(i).mostrarMao();
+        }
         
     }
+    
+    void todosOsJogadoresDescartamUmaCarta(){
+         for(int i=0; i < listaJogadores.size(); i++){
+                int indexDescarte = rand.nextInt(listaJogadores.get(i).cartasNaMao.size());
+                listaJogadores.get(i).cartasNaMao.remove(indexDescarte);
+        
+            }
+        System.out.println("Todos os jogadores descartam uma carta.");
+        
+    }
+ 
+    
     
  
     
