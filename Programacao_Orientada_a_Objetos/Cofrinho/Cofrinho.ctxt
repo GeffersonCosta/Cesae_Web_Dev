@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Cofrinho
+comment1.params=
+comment1.target=Cofrinho()
+comment2.params=tipomoeda\ valor
+comment2.target=void\ adicionar(java.lang.String,\ double)
+comment3.params=valor
+comment3.target=void\ remover(double)
+comment4.params=
+comment4.target=void\ listagemMoedas()
+comment5.params=
+comment5.target=void\ totalConvertido()
+numComments=6
