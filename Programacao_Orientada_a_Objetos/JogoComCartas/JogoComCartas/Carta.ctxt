@@ -6,4 +6,6 @@ comment2.params=n\ r
 comment2.target=Carta(java.lang.String,\ java.lang.String)
 comment3.params=n\ r
 comment3.target=Carta(int,\ int)
-numComments=4
+comment4.params=
+comment4.target=java.lang.String\ escritaCompletaDaCarta()
+numComments=5

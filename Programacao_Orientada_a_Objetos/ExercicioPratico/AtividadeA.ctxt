@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=AtividadeA
+comment1.params=
+comment1.target=AtividadeA()
+comment2.params=
+comment2.target=void\ numerosGrela()
+comment3.params=
+comment3.target=void\ numeroSorteado()
+comment4.params=
+comment4.target=java.lang.String\ estrelaSorteado()
+comment5.params=
+comment5.target=void\ euromilhoes()
+comment6.params=
+comment6.target=void\ estrelaGrela()
+numComments=7

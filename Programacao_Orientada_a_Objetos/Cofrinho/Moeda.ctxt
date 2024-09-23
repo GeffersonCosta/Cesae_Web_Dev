@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Moeda
+comment1.params=paramTipoMoeda\ paramValor
+comment1.target=Moeda(java.lang.String,\ double)
+comment2.params=
+comment2.target=void\ info()
+numComments=3

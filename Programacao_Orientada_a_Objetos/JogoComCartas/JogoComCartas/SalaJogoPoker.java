@@ -1,72 +1,130 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class SalaJogoPoker
 {
     int cont=0;
     Jogador jogadorPoker;
     ArrayList<Jogador> listaJogadores;
-    Utilizador utilizadorId;
-    Carta carta = new Carta();
-    ArrayList<Carta> novoBaralho;
+    Carta carta;
+    ArrayList<Carta> novoBaralho = new ArrayList<Carta>();
+    Random rand = new Random();
+    boolean baralhoCheio = false;
     public SalaJogoPoker()
     {
-     
-       listaJogadores = new ArrayList();
-       
+
+        listaJogadores = new ArrayList();
+
     }
-    
+
     void adicionarJogador(){
-        
+
         cont++;
         jogadorPoker = new Jogador();
+        jogadorPoker.setPontos(10);
         jogadorPoker.nomeNoJogo = "Player_"+cont;
         listaJogadores.add(jogadorPoker);
-                
+        System.out.println(jogadorPoker.nomeNoJogo);
+
     }
+
     void contarJogares(){
-      System.out.println("Existem "+listaJogadores.size()+" Jogares");
+        System.out.println("Existem "+listaJogadores.size()+" Jogares");
     }
-    
-    void mostrarLista(){
+
+    void ListarJogadores(){
         if(listaJogadores.size() != 0){
             for(int i=0; i < listaJogadores.size(); i++){
-            System.out.println("Jogador: "+listaJogadores.get(i).nomeNoJogo);
-        }
+                System.out.println("Jogador: "+listaJogadores.get(i).nomeNoJogo);
+            }
         }
         else{
             System.out.println("Lista vazia");
-            
+
         }
     }
-    
+
     void criarBaralho(){
-        novoBaralho = new ArrayList();
+
         for(int i = 0; i < carta.arrayNaipes.length; i++)
         {
             for(int j = 0; j < carta.arrayRanks.length; j++)
             {
                 novoBaralho.add(new Carta(i,j));
-               System.out.println(novoBaralho.get(j).rank + novoBaralho.get(i).naipe);
             }
+        }
+        baralhoCheio = true;
+        System.out.println("Baralho Criado com Sucesso!");
+
+    }
+
+    void mostraListaDeBaralho(){
+        if(novoBaralho.size() == 0){
+            System.out.println("Baralho Vazio");
+        }
+        else{
+            for(int i = 0; i < novoBaralho.size(); i++)
+            {
+                System.out.println(novoBaralho.get(i).naipe + novoBaralho.get(i).rank);
+            }
+        }
+    }
+
+    void numeroDeItensNaLista(){
+        System.out.println(novoBaralho.size());
+    }
+
+
+    void flop()
+    {
+        if(baralhoCheio){
+            for(int i=0; i < 3; i++){
+                int saidaDeCartasAleatorias = rand.nextInt(novoBaralho.size());
+                carta = novoBaralho.get(saidaDeCartasAleatorias);
+                System.out.println("Saiu o "+ carta.naipe +  " " +  carta.rank);
+               // System.out.println("Saiu o "+ novoBaralho.get(saidaDeCartasAleatorias).naipe +  " " +  novoBaralho.get(saidaDeCartasAleatorias).rank);
+                novoBaralho.remove(saidaDeCartasAleatorias);
+
+            }
+        }
+        else{
+            System.out.println("Baralho Vazio");
+        }
+
+    }
+    
+    void todosJogodoresCompramUmaCarta(){
+        
+         for(int i=0; i < listaJogadores.size(); i++){
+                int saidaDeCartasAleatorias = rand.nextInt(novoBaralho.size());
+                carta = novoBaralho.get(saidaDeCartasAleatorias);
+                novoBaralho.remove(saidaDeCartasAleatorias);
+                listaJogadores.get(i).comprarCarta(carta);
+
+            }
+        System.out.println("Todos os jogadores compraram uma carta.");
+    }
+    
+    
+    void todosOsJogadoresMostramASuaMao(){
+        for(int i = 0; i<listaJogadores.size(); i++){
+            listaJogadores.get(i).mostrarMao();
         }
         
     }
     
-    void flop()
-    {
-        for(int i=0; i < 2; i++){
-            for(int j=0; j < 2; j++ ){
-                 
-                 System.out.println(novoBaralho.get(i).rank);
-                
-                 //System.out.println("Saiu o " + carta.rank + " " +  carta.naipe);
-            }
-        }
+    void todosOsJogadoresDescartamUmaCarta(){
+         for(int i=0; i < listaJogadores.size(); i++){
+                int indexDescarte = rand.nextInt(listaJogadores.get(i).cartasNaMao.size());
+                listaJogadores.get(i).cartasNaMao.remove(indexDescarte);
         
-    }    
+            }
+        System.out.println("Todos os jogadores descartam uma carta.");
+        
+    }
+ 
     
     
-    
-
+ 
     
 }
