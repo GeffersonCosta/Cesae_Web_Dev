@@ -82,6 +82,6 @@ button {
 .invisible {
   display: none;
 }
-#main-conteudo{
+#modoLink, #main-conteudo{
   display: none;
 }
