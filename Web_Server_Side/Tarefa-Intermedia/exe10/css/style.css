@@ -1,0 +1,46 @@
+body {
+  background-color: #b2a3c4;
+}
+h1 {
+  text-align: center;
+}
+.botao {
+  width: 200px;
+  height: 70px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #3825508a;
+}
+.botao:hover {
+  background-color: #a976eb8a;
+  color: #fff;
+}
+div {
+  display: flex;
+  flex-direction: column;
+}
+.div-filho {
+  justify-content: center;
+  margin: 0 auto;
+}
+.div-filho > div {
+  padding: 10px;
+}
+
+#verificarUtilizadorNome {
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+button {
+  margin-top: 10px;
+}
+
+#resultadoTela {
+  margin: 0 auto;
+}
+.invisible {
+  display: none;
+}
