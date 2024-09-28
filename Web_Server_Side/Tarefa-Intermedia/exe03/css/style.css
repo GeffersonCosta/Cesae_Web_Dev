@@ -21,4 +21,5 @@ div{
 .div-filho{
   justify-content: center;
   margin: 0 auto;
+  height: 90vh;
 }

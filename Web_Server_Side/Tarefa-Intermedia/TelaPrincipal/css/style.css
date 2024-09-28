@@ -1,41 +1,40 @@
 body {
   background-color: #b2a3c4;
 }
-h1{
+h1 {
   color: #3a3939;
   text-align: center;
 }
-h2{
+h2 {
   text-align: center;
 }
-header{
+header {
   padding-bottom: 80px;
 }
-main{
+main {
   margin-bottom: 40px;
 }
-.main{
+.main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-.conteudo iframe{
+.conteudo iframe {
   height: 350px;
 }
-.conteudo{
+.conteudo {
   border: 2px solid rgb(8, 8, 3);
   margin: 10px;
   box-shadow: 1px 1px 1px 1px black;
 }
-ul{
+ul {
   padding: 0;
 }
-ul li{
+ul li {
   list-style: none;
   font-size: 1.2rem;
   font-weight: 700;
   align-items: baseline;
   margin: 0 auto;
-
 }
 .botao {
   width: 200px;
@@ -82,6 +81,43 @@ button {
 .invisible {
   display: none;
 }
-#modoLink, #main-conteudo{
+#modoLink,
+#main-conteudo {
   display: none;
+}
+
+li {
+  padding: 5px;
+}
+li a {
+  font-size: 1.5rem;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+li a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+@media (max-width: 650px) {
+  .main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1300px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 650px) {
+  .main {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

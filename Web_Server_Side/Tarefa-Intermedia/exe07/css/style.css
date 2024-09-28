@@ -9,6 +9,7 @@ body {
   font-size: 1rem;
   font-weight: 700;
   color: #3825508a;
+ 
 }
 .botao:hover {
   background-color: #a976eb8a;
@@ -28,4 +29,7 @@ div {
   padding: 10px;
   border-radius: 5px;
   display: none;
+}
+button{
+  align-items: center;
 }

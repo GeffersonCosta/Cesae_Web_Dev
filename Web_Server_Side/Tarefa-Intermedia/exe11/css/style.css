@@ -33,6 +33,7 @@ div {
 }
 button {
   margin-top: 10px;
+  align-self: center;
 }
 
 #resultadoTela {
