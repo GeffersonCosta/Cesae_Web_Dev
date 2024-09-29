@@ -2,7 +2,7 @@ var hexAleatorio;
 var resultadoTela;
 var visible;
 mensagens = [
-  ["É só mais um esforço e a seguir serie um programador de renome"],
+  ["É só mais um esforço e a seguir será um programador de renome"],
   ["Acredite em você!"],
   ["Vai com tudo"],
   ["Você é capaz"],
