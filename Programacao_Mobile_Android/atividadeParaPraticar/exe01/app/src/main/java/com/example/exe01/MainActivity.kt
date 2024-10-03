@@ -24,20 +24,22 @@ class MainActivity : AppCompatActivity() {
 
             val morada = binding.editTextMorada.text.toString();
             var nome = binding.editTextNome.text.toString();
+            val telefone = binding.editTextTelefone.text.toString();
+            val email = binding.editTextTextEmail.text.toString();
+
             val i: Intent = Intent(this, inforUser_Activity::class.java)
+
             i.putExtra("nome", nome)
             i.putExtra("morada", morada)
+            i.putExtra("telefone", telefone)
+            i.putExtra("email", email)
             startActivity(i)
 
 
-
-
-
-           /*
-            val telefone = binding.editTextTelefone.text.toString();
-            val email = binding.editTextTextEmail.text.toString();*/
-
-
+            binding.editTextMorada.text.clear();
+            binding.editTextNome.text.clear();
+            binding.editTextTelefone.text.clear();
+            binding.editTextTextEmail.text.clear();
 
 
 

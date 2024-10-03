@@ -21,9 +21,13 @@ class inforUser_Activity : AppCompatActivity() {
 
 
         val i = intent;
-        val nome = i.extras?.getString("nome")
+        val nome = i.extras?.getString("nome");
         val morada = i.extras?.getString("morada");
-        binding.textResultadoTela2.text = "O ${nome} mora na rua ${morada}"
+        val telefone = i.extras?.getString("telefone");
+        val email = i.extras?.getString("email");
+
+        binding.textResultadoTela2.text = "O ${nome} mora na rua ${morada}, tem o telefone${telefone} e o email ${email}";
 
     }
+
 }

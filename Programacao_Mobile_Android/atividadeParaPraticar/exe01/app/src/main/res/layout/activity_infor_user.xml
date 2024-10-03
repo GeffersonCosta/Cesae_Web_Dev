@@ -14,7 +14,7 @@
         android:id="@+id/text_ResultadoTela2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Resultado"
+        android:text=""
         android:textSize="20sp"
         tools:layout_editor_absoluteX="192dp"
         tools:layout_editor_absoluteY="315dp" />
