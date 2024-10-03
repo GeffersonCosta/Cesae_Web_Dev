@@ -1,58 +1,96 @@
+
 // let bannerSelection = document.getElementById('banner');
-// console.log(bannerSelection);
 
-// const titleH1 = document.getElementById("mainheading");
-// console.log(titleH1)
-// titleH1.style.color = "red"
-// titleH1.style.fontSize = "3rem"
-
-// const imgUni = document.getElementById("unicorn");
-// console.log(imgUni)
-
-// let doneTodos = document.getElementsByClassName('done');
-// let doneTodos2 = document.querySelectorAll('.done');
-// console.log(doneTodos);
-// console.log(doneTodos2);
-
-// let titulo = document.getElementById("titulo")
-// titulo.innerText += "  Hello"
-
-// let checkbox = document.querySelector("input[type ='checkbox']");
-
-// console.log(checkbox)
-
-// let text = document.querySelector('span')
-// text.innerText = "YACK";
-
-// let imagem = document.querySelector("img");
-// imagem.setAttribute('src', 'https://devsprouthosting.com/images/chicken.jpg')
-// function changeImg(){
-
-//  if(imagem.src == "https://devsprouthosting.com/images/chicken.jpg"){
-//   imagem.setAttribute('src', 'https://devsprouthosting.com/images/egg.jpg')
-//  }
-//  else{
-//   imagem.setAttribute('src', 'https://devsprouthosting.com/images/chicken.jpg')
-//  }
+// if(bannerSelection){
+//     console.log(bannerSelection);
 // }
 
-// let teste =  document.getElementById('container');
-// teste.style.textAlign = "center";
-// document.querySelector('img').style.width = "150px";
-// document.querySelector('img').style.borderRadius = "50%";
 
-const arry = ['red', 'orange', 'yello2', 'green', 'blue', 'indigo', 'violet']
+// let image = document.getElementById('unicorn');
+// let heading = document.getElementById('mainheading');
 
-var teste = document.querySelectorAll('span')
-for(var i =0; i < arry.length; i++){
-   teste[i].style.color = arry[i];
+
+// console.log(image)
+// console.log(heading)
+
+// let doneTodos = document.querySelectorAll('.done');
+
+// let checkbox = document.querySelector("input[type='checkbox']");
+
+
+// console.log(doneTodos)
+// console.log(checkbox)
+
+// let myTextVar = document.querySelector('a');
+//myTextVar.innerText = 'cucu vamos manipular coisas';
+//myTextVar.innerHTML = 'cucu vamos manipular coisas e trocar elementos';
+
+// myTextVar.href = 'www.cesaedigital.pt';
+
+// let myVar = document.querySelector('span');
+// myVar.innerText = 'yackk';
+
+
+function changeImage(){
+    let myImage = document.querySelector('img');
+
+    if(myImage.src == 'https://devsprouthosting.com/images/chicken.jpg'){
+        myImage.setAttribute('src', 'https://devsprouthosting.com/images/egg.jpg');
+    }else{
+        myImage.setAttribute('src', 'https://devsprouthosting.com/images/chicken.jpg');
+    }
+}
+
+//pp25DOM - aula 26.09 - exercicio rainbow
+const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+
+let spans = document.querySelectorAll('span');
+//console.log(spans);
+
+for(let i = 0; i < spans.length; i++) {
+    spans[i].style.color = colors[i];
 }
 
 
 
+//  pp27DOM - aula 26.09 - exercicio classList 
+// Tentar refazer com ForIn e ForOff
+const listItems = document.querySelectorAll('li');
+
+//OPÇÃO 01
+for (let i = 0; i < listItems.length; i++) {
+    if (listItems[i].classList.contains('highlight')) {
+        listItems[i].classList.remove('highlight');
+    } else {
+        listItems[i].classList.add('highlight');
+    }
+}
+
+//OPÇÃO 02
+/* for (element of listItems) {
+    if (element.classList.contains('highlight')) {
+        element.classList.remove('highlight');
+    } else {
+        element.classList.add('highlight');
+    }
+} */
+
+/* //  pp28DOM - aula 26.09 - exercicio manipular pais e filhos
+let myLiTest = document.querySelector('.tocsection-1');
+console.log(myLiTest);
+console.log(myLiTest.parentElement);
+console.log(myLiTest.children); */
 
 
+//  pp30DOM - aula 26.09 - exercicio adicionar e remover elementos
+for (let i = 1; i <= 100; i++) {
+    const buttons = document.createElement('button');
+    buttons.innerText = 'Clique aqui!';
 
+    //opção 02
+    //const myContainer = document.querySelector('#container');
+    const myContainer = document.getElementById('container');
+    myContainer.appendChild(buttons);
 
-
-
+    buttons.setAttribute('class', 'button');
+}

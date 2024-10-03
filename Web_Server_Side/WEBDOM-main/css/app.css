@@ -40,4 +40,9 @@ img.square {
     background-color: yellow;
  }
 
-
+.button{
+    width: 8em;
+    height: 3em;
+    border: 2px solid #561e8f;
+    margin: 0.5em;
+}
