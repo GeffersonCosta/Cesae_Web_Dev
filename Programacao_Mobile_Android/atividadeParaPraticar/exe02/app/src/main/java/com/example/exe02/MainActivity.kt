@@ -17,18 +17,13 @@ class MainActivity : AppCompatActivity() {
 
         binding.buttonMain.setOnClickListener{
 
-            val numero = binding.editNumberactyMain.text.toString();
+            val numero1 = binding.editNumberactyMain.text.toString().toDouble();
 
             val i: Intent = Intent(this, UserActivity2::class.java);
 
-            i.putExtra("numero", numero);
+            i.putExtra("numero", numero1);
+
             startActivity(i);
-
-
-            /*TESTE*/
-           /* var soma = numero + 10;
-            binding.textView4.text = "Resultado: ${soma.toString()}";*/
-
 
         }
     }

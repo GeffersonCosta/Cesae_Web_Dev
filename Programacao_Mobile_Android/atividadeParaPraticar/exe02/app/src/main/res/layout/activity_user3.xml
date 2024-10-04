@@ -6,54 +6,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
-
+    tools:context=".UserActivity3">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical">
-
+        >
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textTitulo3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="300dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Exercicio 2 - Tela Principal"
+            android:text="Exercicio 2 - Activity3"
             android:textSize="30dp" />
 
-        <EditText
-            android:id="@+id/editNumberactyMain"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="inserir um número"
-            android:inputType="number" />
-
-        <Button
-            android:id="@+id/buttonMain"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="Enviar" />
-
-       <!--<TextView
-            android:id="@+id/textView4"
+        <TextView
+            android:id="@+id/textSomaDoDoisNumeros"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
             android:layout_weight="1"
-            android:text="TextView" />-->
-
+            android:textSize="20dp"
+            android:text="A soma dos dois números: "
+            />
+        <Button
+            android:id="@+id/buttonActivi3Resultado"
+            android:layout_width="163dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Resultado" />
 
     </LinearLayout>
 
 
+
+
 </LinearLayout>
-
-
-

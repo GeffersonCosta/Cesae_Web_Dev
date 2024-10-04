@@ -1,5 +1,6 @@
 package com.example.exe02
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.exe02.databinding.ActivityUser2Binding
@@ -10,18 +11,17 @@ class UserActivity2 : AppCompatActivity() {
         ActivityUser2Binding.inflate(layoutInflater);
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        val i = intent;
+       val numero2 = binding.editNumberActivi2.text.toString().toDouble();
 
-        val numero = i.extras?.getString("numero")
+        val j: Intent = Intent(this, UserActivity3::class.java)
 
-        binding.textView2.text = "Resultado: ${numero}";
+        j.putExtra("numero", numero2);
 
-
+        startActivity(j);
 
 
     }
