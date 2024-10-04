@@ -24,7 +24,6 @@ function texto() {
     visible.style.display = "block";
   });
 }
-
 function aumentar() {
   resultadoTela = document.getElementById("resultadoTela");
   resultadoTela.style.fontSize = "4rem";

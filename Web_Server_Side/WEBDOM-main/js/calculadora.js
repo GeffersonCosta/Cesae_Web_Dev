@@ -4,27 +4,27 @@ let selectOption = document.getElementById("selectOption");
 let resultOperation = document.getElementById("resultOperation");
 let resultTela = document.getElementById("resultTela");
 
-function operacao(){
-  var resultadoPrint =0;
-switch(selectOption.value){
+function operacao() {
+  var resultadoPrint = 0;
+  switch (selectOption.value) {
     case "+":
       resultadoPrint = Number(firstNumber.value) + Number(secundNumber.value);
-    break;
+      break;
     case "-":
       resultadoPrint = Number(firstNumber.value) - Number(secundNumber.value);
-    break;
+      break;
     case "/":
       resultadoPrint = Number(firstNumber.value) / Number(secundNumber.value);
-    break;
+      break;
     case "x":
       resultadoPrint = Number(firstNumber.value) * Number(secundNumber.value);
-    break;     
+      break;
+  }
+
+  resultTela.innerText = " ";
+  resultTela.innerHTML += `Total: ${resultadoPrint}`;
+  firstNumber.value = " ";
+  secundNumber.value = " ";
 }
-  resultTela.innerHTML += ` ${resultadoPrint}`
-}
 
-
-resultOperation.addEventListener('click', operacao)
-
-
-
+resultOperation.addEventListener("click", operacao);
