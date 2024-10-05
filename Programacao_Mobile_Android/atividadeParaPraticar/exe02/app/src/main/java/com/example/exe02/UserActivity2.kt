@@ -15,14 +15,14 @@ class UserActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-       val numero2 = binding.editNumberActivi2.text.toString().toDouble();
+        binding.buttonActi2.setOnClickListener{
 
-        val j: Intent = Intent(this, UserActivity3::class.java)
+            var numero2 = binding.editNumberActivi2.text.toString().toDouble();
+            val j: Intent = Intent(this, UserActivity3::class.java)
+            j.putExtra("numero2", numero2)
+            startActivity(j);
 
-        j.putExtra("numero", numero2);
-
-        startActivity(j);
-
+        }
 
     }
 }

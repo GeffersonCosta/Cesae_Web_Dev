@@ -18,12 +18,15 @@ class UserActivity3 : AppCompatActivity() {
 
         binding.buttonActivi3Resultado.setOnClickListener{
 
-         val i = intent
-         val j = intent
+         val i = intent;
+         val j = intent;
+
          val numero1 = i.extras?.getDouble("numero1");
-         val numero2 = j.extras?.getDouble("numero2");
-         val somaDosDoisNumeros = numero1;
-         binding.textSomaDoDoisNumeros.text = "${somaDosDoisNumeros}";
+         setResult(1,i);
+         finish();
+         val numero2 = j.extras?.getDouble("numero2")
+
+         binding.textSomaDoDoisNumeros.text = numero1.toString();
 
 
 
