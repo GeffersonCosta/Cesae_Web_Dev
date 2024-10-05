@@ -18,24 +18,65 @@
             android:id="@+id/textTitulo3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="300dp"
+            android:layout_marginBottom="60dp"
             android:layout_weight="1"
             android:gravity="center"
             android:text="Exercicio 2 - Activity3"
             android:textSize="30dp" />
 
         <TextView
+            android:id="@+id/textVisualizar"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Clique para Visualizar o resultado"
+            android:textSize="20dp" />
+
+        <TextView
             android:id="@+id/textSomaDoDoisNumeros"
-            android:layout_width="match_parent"
+            android:layout_width="411dp"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp"
             android:layout_weight="1"
-            android:textSize="20dp"
-            android:text="A soma dos dois números: "
-            />
+            android:gravity="center"
+            android:text=""
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textDiferencaEntreOsNumeros"
+            android:layout_width="411dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=""
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textProduto"
+            android:layout_width="411dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=""
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textDivisaoInteira"
+            android:layout_width="411dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=""
+            android:textSize="20dp" />
+
         <Button
             android:id="@+id/buttonActivi3Resultado"
-            android:layout_width="163dp"
+            android:layout_width="199dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Resultado" />

@@ -17,9 +17,12 @@ class UserActivity2 : AppCompatActivity() {
 
         binding.buttonActi2.setOnClickListener{
 
-            var numero2 = binding.editNumberActivi2.text.toString().toDouble();
+            val i = intent;
+            val numero1 = i.extras?.getDouble("numero1")
+            val numero2 = binding.editNumberActivi2.text.toString().toDouble();
             val j: Intent = Intent(this, UserActivity3::class.java)
             j.putExtra("numero2", numero2)
+            j.putExtra("numero1", numero1)
             startActivity(j);
 
         }
