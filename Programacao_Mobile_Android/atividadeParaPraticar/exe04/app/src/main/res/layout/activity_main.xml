@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Taberna do Tião"
+        android:textSize="45dp"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/checkBoxPedido1"
+            android:layout_width="353dp"
+            android:layout_height="wrap_content"
+            android:text="Pizza" />
+
+        <TextView
+            android:id="@+id/textViewValor1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="2.00" />
+
+        <TextView
+            android:layout_width="28dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="€" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/checkBoxPedido2"
+            android:layout_width="353dp"
+            android:layout_height="wrap_content"
+            android:text="Coca-cola" />
+
+        <TextView
+            android:id="@+id/textViewValor2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="2.50" />
+
+        <TextView
+            android:layout_width="28dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="€" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/checkBoxPedido3"
+            android:layout_width="353dp"
+            android:layout_height="wrap_content"
+            android:text="Prego no prato" />
+
+        <TextView
+            android:id="@+id/textViewValor3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="6.50" />
+
+        <TextView
+            android:layout_width="28dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="€" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/checkBoxPedido4"
+            android:layout_width="353dp"
+            android:layout_height="wrap_content"
+            android:text="Fino" />
+
+        <TextView
+            android:id="@+id/textViewValor4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="1.50" />
+
+        <TextView
+            android:layout_width="28dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="€" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/checkBoxPedido5"
+            android:layout_width="353dp"
+            android:layout_height="wrap_content"
+            android:text="Francesinha Especial" />
+
+        <TextView
+            android:id="@+id/textViewValor5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="10.50" />
+
+        <TextView
+            android:layout_width="28dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="€" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/checkBoxPedido6"
+            android:layout_width="353dp"
+            android:layout_height="wrap_content"
+            android:text="Sangria 1L" />
+
+        <TextView
+            android:id="@+id/textViewValor6"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="12.50" />
+
+        <TextView
+            android:layout_width="28dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="€" />
+    </LinearLayout>
+
+
+
+
+
+
+    <Button
+        android:id="@+id/buttonRegistarPedido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Efetuar pedido" />
+
+
+
+</LinearLayout>
