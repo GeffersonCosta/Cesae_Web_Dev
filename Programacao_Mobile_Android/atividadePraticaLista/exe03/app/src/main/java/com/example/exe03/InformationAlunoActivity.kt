@@ -22,5 +22,6 @@ class InformationAlunoActivity : AppCompatActivity() {
         binding.textInformacaoCompleta.text = "Nome: ${nome} \n Morada: ${morada} \n Email: ${email}"
 
 
+
     }
 }
