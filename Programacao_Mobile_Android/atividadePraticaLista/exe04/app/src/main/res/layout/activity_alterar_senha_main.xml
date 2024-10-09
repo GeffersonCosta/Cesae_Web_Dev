@@ -1,10 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".AlterarSenhaMainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:text="Verificar Dados para Repor Senha" />
+        <EditText
+            android:id="@+id/editVerificarUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Username"
+            android:ems="10"
+             />
+
+        <EditText
+            android:id="@+id/editVerificarEmail"
+            android:layout_width="423dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Email" />
+
+        <EditText
+            android:id="@+id/editVerificarCC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Número do Cartao Cidadão"
+            android:inputType="text" />
+        <Button
+            android:id="@+id/buttonVerificarInformacoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verificar" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

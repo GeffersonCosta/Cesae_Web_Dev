@@ -27,12 +27,12 @@
             android:text="Exercicio4-Parte1" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/editTextUserName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Name"
+            android:hint="User Name"
             android:inputType="text" />
 
         <EditText
@@ -58,6 +58,13 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Regitar" />
+
+        <Button
+            android:id="@+id/buttonAlterarSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Repor password" />
 
     </LinearLayout>
 
