@@ -5,7 +5,8 @@ const image = document.getElementById("img");
 var data;
 
 const fetchApi = (value) => {
-  const result = fetch(`https://rickandmortyapi.com/api/character/${value}`)
+  const result = fetch(`https://swapi.dev/api/${value}`)
+//https://swapi.dev/
     .then((res) => res.json())
     .then((data) => {
       // console.log(data);
