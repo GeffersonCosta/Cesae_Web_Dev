@@ -1,0 +1,25 @@
+body {
+  background-color: #b2a3c4;
+}
+.botao{
+  width: 200px;
+  height: 70px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color:#3825508a;
+}
+.botao:hover{
+  background-color: #a976eb8a;
+  color: #fff;
+}
+div{
+  display: flex;
+  flex-direction: column;
+}
+.div-filho{
+  justify-content: center;
+  margin: 0 auto;
+  height: 90vh;
+}
