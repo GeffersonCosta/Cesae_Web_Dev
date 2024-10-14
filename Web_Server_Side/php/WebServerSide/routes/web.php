@@ -30,10 +30,15 @@ Route::get('/newUsers', function(){
 
 
 
+
 // rota de fallback, onde o user cai quando clica numa rota que não está registada
 
 Route::fallback(function(){
    return "<a href=".route('homepage').">Estás perdido, volta aqui</a>";
+});
+
+Route::fallback(function(){
+    return view('utils.fallback');
 });
 
 
