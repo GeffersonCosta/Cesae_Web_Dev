@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(227, 180, 255);
+}
+img{
+    width: 800px;
+    border-radius: 10px;
+}
+a{
+    font-size: 2rem;
+    color: #8d8d8d;
+}

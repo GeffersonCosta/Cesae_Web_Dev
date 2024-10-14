@@ -1,0 +1,114 @@
+#extensões laravel para VC
+
+- PHP IntelliSense
+- PHP Namespace Resolver
+- Laravel-blade
+- Laravel Blade Snippets
+- Laravel goto view
+
+- Laravel extension pack
+- Laravel go-to-components
+- Laravel Extra Intellisense
+
+
+
+COMANDOS LARAVEL
+-> php artisan serve (iniciar o Servidor)
+
+-> php artisan make:controller DashboardController (criar um controller)
+-> php artisan make:controller UserController -r (controller com recursos)
+
+-> php artisan migrate (corre as migrações novas)
+-> php artisan migrate:status
+-> php artisan make:migration nomeDaMigração (corre a migração)
+-> php artisan migrate:rollback (reverte a migração)
+-> php artisan make:migration add_user_type_to_users_table (migração para alteração da tabela Users)
+
+
+//Rotas com Controller
+Route::get('/home_contacts', [HomeController::class, 'index'])->name('index.contacts');
+
+//retornar uma view com dados
+return view ('nameofview', compact('contacts');
+
+
+BASES DE DADOS
+-> mysql --version 
+-> mysql -u root -p (entrar como root)
+-> CREATE DATABASE sd_app;
+
+Facade Query Builder
+-> use Illuminate\Support\Facades\DB;
+
+
+AUTENTICAÇÂO
+use Illuminate\Support\Facades\Auth;
+
+OUTRAS UTILIDADES
+
+//Formas de Debug
+var_dump($var)
+dd();
+
+file_put_contents("test.txt","Hello World. Testing!"); (uma variável)
+file_put_contents("output.txt", print_r($user, true)); (array ou objecto)
+->toSql();
+
+//dar permissões a uma pasta
+sudo chmod -R 777 nossaPasta
+
+//chamar um asset da pasta Public (imagens, CSS, JS,..)
+asset('caminhodentrodapastapublic/meuficheiro');
+
+//voltar para a rota anterior
+return back();
+
+//redireccionar para a rota especifica com mensagem
+return redirect()->route('nomeDaRota')->with('message', 'envio de mensagem');
+Na view: 
+if(session('message'))
+<p>session('message')</p>
+@endif
+
+
+//request->has('email') -> isset;
+
+//onclick/onsubmit="confirm('Tem a certeza?')";
+
+//encriptar a password
+use Illuminate\Support\Facades\Hash;
+
+
+FILE STORAGE 
+Storage::url(‘aminhaimagem.img’) -> retorna o caminho através do servidor.
+Storage::path(‘aminhaimagem.img’) -> retorna o caminho na nossa aplicação.
+Storage:: exists(‘aminhaimagem.img’) -> retorna true ou false conforme exista ou não
+Storage:: size(‘aminhaimagem.img’) -> retorna o tamanho da imagem em bytes
+Storage:: lastModified(‘aminhaimagem.img’) -> retorna a data em que foi modificado
+Storage:: download(‘aminhaimagem.img’) -> retorna o download
+
+Storage::put('localização relativa ao disco', 'Conteúdo do ficheiro'); -> guardar ficheiros
+Storage::prepend('localização relativa ao disco', 'Conteúdo do ficheiro Adicionado'); -> Adicionar conteúdo ao ficheiro
+Storage::apend('localização relativa ao disco', 'Conteúdo do ficheiro Adicionado'); -> Adicionar conteúdo ao ficheiro
+
+
+//para imagens
+Storage::putFile('pasta para o ficheiro', 'objecto do ficheiro'); -> Adicionar imagem a uma pasta
+Storage::putFileAs('pasta para o ficheiro', 'objecto do ficheiro', 'nome do ficheiro'); -> Adicionar imagem com nome específico a uma pasta
+
+No form:
+enctype="multipart/form-data"
+No input:
+type="file"
+accept="image/*"
+
+
+php artisan make:resource TaskResourceCollection --collection.
+php artisan make:migration add_photo_to_users_table --table=use
+
+
+
+
+//correcção de bug table cache
+php artisan cache:table
+php artisan migrate
