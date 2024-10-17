@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Add Users</title>
 </head>
 <body>
-        <h3>Sou uma blade para todos os users</h3>
-
-        <h3>Informações do Cesae</h3>
-        
+    <p>Aqui podes adicionar users</p>
 </body>
 </html>

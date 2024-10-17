@@ -112,3 +112,10 @@ php artisan make:migration add_photo_to_users_table --table=use
 //correcção de bug table cache
 php artisan cache:table
 php artisan migrate
+
+
+
+//formas de debug
+
+dd();
+var_dump();

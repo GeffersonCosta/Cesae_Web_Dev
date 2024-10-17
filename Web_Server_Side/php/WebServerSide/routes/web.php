@@ -1,13 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IndexController;
 
 Route::get('/home', function () {
     return view('utils.home');
 })->name('homepage');
 
 Route::get('/', function () {
-    return view('welcome');
+ return view('welcome');
 })-> name('welcome');
 
 Route::get('/helloworld', function () {
@@ -26,19 +27,16 @@ Route::get('/newUsers', function(){
     return view('newUsers.usersNew');
 })->name('newUser');
 
+Route::get('/home', [IndexController::class,'home'])->name('home');
+//Route::get('/users', [UserController::class, 'users'])->name('users');
+//Route::get('/home', [IndexController::class, 'home'])->name('welcome');
 
-
-
-
-
-// rota de fallback, onde o user cai quando clica numa rota que não está registada
+//rota de fallback, onde o user cai quando clica numa rota que não está registada
 
 Route::fallback(function(){
    return "<a href=".route('homepage').">Estás perdido, volta aqui</a>";
 });
 
-Route::fallback(function(){
-    return view('utils.fallback');
-});
+
 
 
