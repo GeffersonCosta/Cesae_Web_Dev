@@ -6,9 +6,11 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function allUsers(){
-        return view('users.all_users');
+    public function users(){
+        $cesaeInfo = $this -> getCesaeInfo();
+        return view('users.all_users', compact('cesaeInfo'));
       }
+      
     private function getCesaeInfo(){
        return $cesaeInfo = [
             'name' => 'Cesae',
