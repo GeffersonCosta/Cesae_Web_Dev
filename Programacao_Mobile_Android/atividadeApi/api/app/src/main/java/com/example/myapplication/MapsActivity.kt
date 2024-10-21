@@ -11,6 +11,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.example.myapplication.databinding.ActivityMapsBinding
 import com.google.android.gms.maps.CameraUpdate
+import com.google.android.gms.maps.model.CameraPosition
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -40,16 +41,24 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
      */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
-
+        val mountainView = LatLng(41.157944, -8.629105)
         // Add a marker in Sydney and move the camera
        // val sydney = LatLng(-34.0, 151.0)
         //mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
        // mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
 
-        val porto = LatLng(41.157944, -8.629105)
-        mMap.addMarker(MarkerOptions().position(porto).title("Cidade do Porto"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(porto))
-        mMap.animateCamera(CameraUpdateFactory.zoomIn());
+
+        mMap.addMarker(MarkerOptions().position(mountainView).title("Cidade do Porto"))
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(mountainView))
+
+        val cameraPosition = CameraPosition.builder()
+            .target(mountainView) // Sets the center of the map to Mountain View
+            .zoom(17f)            // Sets the zoom
+            .bearing(90f)         // Sets the orientation of the camera to east
+            .tilt(30f)            // Sets the tilt of the camera to 30 degrees
+            .build()              // Creates a CameraPosition from the builder
+        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition))
+
 
     }
 }
