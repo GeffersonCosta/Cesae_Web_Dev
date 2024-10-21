@@ -14,20 +14,15 @@ class IndexController extends Controller
     $weekDays = $this -> getAllWeekDays();
     $info = $this -> getCourseInfo();
     return view('utils.home', compact('myFirstVar', 'weekDays', 'info'));
-
    }
    private function getAllWeekDays(){
     return $weekDays = ['Segunda', 'Terça', 'Quarta', 'Quinta'];
    }
-
    private function getCourseInfo(){
     return $courseInfo = [
         'name' => 'Web&Mobile',
         'hours' => 950
     ];
    }
-
-
-
 }
 

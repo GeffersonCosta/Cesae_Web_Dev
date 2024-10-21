@@ -26,7 +26,7 @@
     <p>Nome: {{$info['name']}}</p>
     <p>Horas: {{$info['hours']}}</p>
 
-    
+
 
 
 
