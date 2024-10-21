@@ -83,7 +83,9 @@
         android:layout_width="274dp"
         android:background="#ffffff"
         android:layout_height="201dp"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+
+        >
 
     </ListView>
 
