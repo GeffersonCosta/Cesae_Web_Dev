@@ -28,7 +28,6 @@ class RegistoUtilizadorActivity : AppCompatActivity() {
     var cartaoCidadao = "";
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
