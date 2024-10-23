@@ -1,1 +1,12 @@
 <p>outo-componente works!</p>
+
+<div style="background-color: aquamarine;">
+  <h3>Contador</h3>
+
+  <p>
+    <span>{{contagem}}</span>
+    <app-contador [aux]="contagem" (mudancaNoContador)="atualizar($event)"/>
+  </p>
+</div>
+
+
