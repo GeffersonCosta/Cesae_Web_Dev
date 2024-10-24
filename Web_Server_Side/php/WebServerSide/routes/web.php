@@ -33,6 +33,10 @@ Route::get('/newUsers', function(){
  Route::get('/', [IndexController::class, 'welcome'])->name('welcome');
 
 
+ Route::get('/users/insert-user', [UserController::class, 'insertUser']);
+
+
+
 //rota de fallback, onde o user cai quando clica numa rota que não está registada
 
 Route::fallback(function(){
