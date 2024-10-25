@@ -1,12 +1,15 @@
-package com.example.atividade1_recyclerview
+package com.example.atividade1_recyclerview.Adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.atividade1_recyclerview.Model.Carro
+import com.example.atividade1_recyclerview.R
 
-class CarroListAdapter : RecyclerView.Adapter<CarroListAdapter.CarroViewHolder>(){
+
+class CarroListAdapter(val listaCarro:ArrayList<Carro>) : RecyclerView.Adapter<CarroListAdapter.CarroViewHolder>(){
 
     class CarroViewHolder(ItemView: View): RecyclerView.ViewHolder(ItemView){
 
@@ -20,11 +23,13 @@ class CarroListAdapter : RecyclerView.Adapter<CarroListAdapter.CarroViewHolder>(
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return listaCarro.size
     }
 
     override fun onBindViewHolder(holder: CarroViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val carro = listaCarro[position]
+
+        holder.textView.setText(carro.modelo)
     }
 
 

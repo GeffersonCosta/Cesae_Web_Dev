@@ -1,4 +1,5 @@
 package com.example.atividade1_recyclerview.Model
 
-class Carro {
+class Carro(var id: Int, var modelo: String){
+
 }
