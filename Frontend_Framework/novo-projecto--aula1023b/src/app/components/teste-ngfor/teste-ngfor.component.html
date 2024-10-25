@@ -1,0 +1,36 @@
+<br><br>
+<h2>Estrutura de Repetição</h2>
+<hr>
+
+<div>
+  (1)
+  <ul>
+    <li *ngFor="let item of fruta">
+      {{item}}
+    </li>
+    <hr>
+    (1_2)
+    <!--Retorna o index na variavel i quando utilizamos o as nesse contexto-->
+    <li *ngFor="let item of fruta; index as i">
+      {{item}} {{i}}
+    </li>
+    <br><hr>
+    (1_3 first item)
+    <li *ngFor="let item of fruta; first as ePrimeiro">
+      {{item}} {{ePrimeiro}}
+    </li>
+    <hr>
+    @for (item of fruta; track $index) {
+      {{item}} {{$index}} <br>
+    }@empty {
+      <li>lista vazia</li>
+    }
+
+  </ul>
+
+
+
+</div>
+
+
+

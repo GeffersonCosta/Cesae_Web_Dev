@@ -1,0 +1,29 @@
+p {
+  color: green;
+}
+
+nav {
+  animation: animaMenu 1s;
+
+  h5 {
+    margin: 0;
+  }
+
+  ul {
+    margin: 0 0 0.5rem;
+  }
+}
+
+@keyframes animaMenu {
+  from {
+    background-color: #000;
+  }
+  to {
+    background-color: #0000;
+  }
+}
+
+.ativo {
+  font-weight: 600;
+  color: #369;
+}
