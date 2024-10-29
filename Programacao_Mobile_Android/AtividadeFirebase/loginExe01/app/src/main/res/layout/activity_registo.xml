@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".RegistoActivity"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/text_Titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:textSize="35dp"
+        android:textColor="#ffffff"
+        android:text="Tela de Registo" />
+
+
+
+    <EditText
+        android:id="@+id/edit_Registar_Email"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:ems="10"
+        android:inputType="text"
+
+        android:hint="Email"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="32dp" />
+
+    <EditText
+        android:id="@+id/edit_Registar_Password"
+        android:layout_width="370dp"
+        android:layout_marginStart="20dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="121dp" />
+
+    <Button
+        android:id="@+id/button_Registar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Registar"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="230dp"
+        android:backgroundTint="#ffffff"
+        />
+
+
+</LinearLayout>
