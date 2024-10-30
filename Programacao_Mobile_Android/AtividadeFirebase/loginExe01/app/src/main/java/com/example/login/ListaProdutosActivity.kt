@@ -23,6 +23,7 @@ class ListaProdutosActivity : AppCompatActivity() {
     private val auth by lazy{
         FirebaseAuth.getInstance()
     }
+    val id = auth.currentUser?.uid
     private val db by lazy{
         FirebaseFirestore.getInstance()
     }
@@ -32,6 +33,7 @@ class ListaProdutosActivity : AppCompatActivity() {
         val i = intent
         var emailUser = i.extras?.getString("email")
         loadData(emailUser.toString())
+
 
 
         binding.buttonAdicionarProduto.setOnClickListener{
@@ -50,34 +52,42 @@ class ListaProdutosActivity : AppCompatActivity() {
     }
 
     private fun gravarUtilizadorDB(emailUser: String){
-
+        val id = auth.currentUser?.uid
         val dados = mapOf(
             "nome" to nome,
             "peso" to peso,
             "valor" to valor
         )
 
-        db.collection(emailUser).document().set(dados).addOnSuccessListener {
+
+      var produto =  db.collection("Usuario").document(emailUser).collection("produtos")
+         produto.add(dados).addOnSuccessListener {
             Toast.makeText(this, "item adicionado na no banco de dados", Toast.LENGTH_LONG).show()
         }.addOnFailureListener{
             Toast.makeText(this, "ERRO: item não adicionado", Toast.LENGTH_LONG).show()
         }
 
-
     }
 
     private fun loadData(emailUser: String){
 
-        db.collection(emailUser).get().addOnSuccessListener { documents ->
-            for(document in documents){
-                nome = document.data?.get("nome").toString()
-                peso = document.data?.get("peso").toString().toDouble()
-                valor = document.data?.get("valor").toString().toDouble()
-                mock.listaProdutoMock.add(Produto(nome,peso,valor))
-                binding.recyclerviewLista.layoutManager = LinearLayoutManager(this)
-                binding.recyclerviewLista.adapter = ListaProdutoAdapter(mock.listaProdutoMock)
+      val produtos = db.collection("Usuario").document(emailUser).collection("produtos")
 
-            }
+      produtos.get().addOnSuccessListener {  querySnapshot  ->
+          if(querySnapshot != null){
+              for(produto in querySnapshot){
+                  nome = produto.data?.get("nome").toString()
+                  peso = produto.data?.get("peso").toString().toDouble()
+                  valor = produto.data?.get("valor").toString().toDouble()
+                  mock.listaProdutoMock.add(Produto(nome,peso,valor))
+                  binding.recyclerviewLista.layoutManager = LinearLayoutManager(this)
+                  binding.recyclerviewLista.adapter = ListaProdutoAdapter(mock.listaProdutoMock)
+
+              }
+
+          }else{
+              Toast.makeText(this, "ERRO: deu vazio", Toast.LENGTH_LONG).show()
+          }
 
         }
     }
