@@ -52,7 +52,12 @@ class ListaProdutosActivity : AppCompatActivity() {
     }
 
     private fun gravarUtilizadorDB(emailUser: String){
+<<<<<<< HEAD
         val id = auth.currentUser?.uid
+=======
+
+        val id = auth.currentUser?.email
+>>>>>>> 1bf4f37c81d9e19dc7213a9abd1a4e2e5dc3aec2
         val dados = mapOf(
             "nome" to nome,
             "peso" to peso,
