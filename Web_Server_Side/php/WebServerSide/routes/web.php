@@ -33,7 +33,7 @@ Route::get('/newUsers', function(){
  Route::get('/', [IndexController::class, 'welcome'])->name('welcome');
 
 
- Route::get('/users/insert-user', [UserController::class, 'insertUser']);
+ Route::get('/users/insert-user', [UserController::class, 'insertUser'])->name('Inserir_User');
 
 
 

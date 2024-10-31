@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Foundation\Auth\User;
+use Symfony\Component\HttpFoundation\Response;
+
 
 class UserController extends Controller
 {
@@ -29,13 +32,35 @@ class UserController extends Controller
         ];
     }
     public function insertUser(){
-      DB::table('users')->insert([
-            'name' => "henrique2",
-            'email' => "gefferson6@gmail.com",
+      $todoConteudo =  listas::all();
+        dd($todoConteudo);
+      return view("users.insert-user", compact('listas'));
+
+      /*DB::table('users')->insert([
+            'name' => "henrique150",
+            'email' => "gefferson200@gmail.com",
             'password' => "gefferson123469"
         ]);
+        return view("users.insert-user");*/
+     //-------------------------------------------------------
+        // Db::table('users')
+        // -> updateOrInsert(
+        //     [
+        //         'email' => 'Pedro@gmail.com',
+        //         'password' => 'Pedro123456'
+        //     ],
+        //     [
+        //         'name' => 'Pedro',
+        //         'updated_at' => now(),
+        //         'password' => 'abx123456'
+        //     ],
+        //     );}
 
-    }
+        // db::table('users')
+        // -> where('id', 10)
+        // -> delete();
+
+ }
 }
 
 
