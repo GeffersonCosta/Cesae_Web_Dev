@@ -53,8 +53,6 @@ class ListaProdutosActivity : AppCompatActivity() {
 
     private fun gravarUtilizadorDB(emailUser: String){
 
-        val id = auth.currentUser?.uid
-        
         val dados = mapOf(
             "nome" to nome,
             "peso" to peso,
@@ -62,7 +60,7 @@ class ListaProdutosActivity : AppCompatActivity() {
         )
 
 
-      var produto =  db.collection("Usuario").document(emailUser).collection("produtos")
+      val produto =  db.collection("Usuario").document(emailUser).collection("produtos")
          produto.add(dados).addOnSuccessListener {
             Toast.makeText(this, "item adicionado na no banco de dados", Toast.LENGTH_LONG).show()
         }.addOnFailureListener{
