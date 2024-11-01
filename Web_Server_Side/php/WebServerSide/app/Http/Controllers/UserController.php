@@ -32,9 +32,19 @@ class UserController extends Controller
         ];
     }
     public function insertUser(){
-      $todoConteudo =  listas::all();
-        dd($todoConteudo);
-      return view("users.insert-user", compact('listas'));
+
+        DB::table('users')->insert([
+            'name' => "henrique181",
+            'email' => "gefferson202@gmail.com",
+            'password' => "abcfe1234ab"
+        ]);
+
+     $users = DB::table('users')
+       -> get();
+
+      return view("users.insert-user", compact('users'));
+
+
 
       /*DB::table('users')->insert([
             'name' => "henrique150",

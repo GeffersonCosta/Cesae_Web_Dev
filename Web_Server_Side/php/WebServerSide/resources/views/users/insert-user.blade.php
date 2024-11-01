@@ -4,10 +4,9 @@
 
 <h1>Usuário inserido no banco de dados</h1>
 <ul>
-    {{-- @foreach ($listas as $lista)
-
-            <li>{{$lista -> name}}</li>
-    @endforeach --}}
+    @foreach ($users as $user)
+            <li>Nome: {{$user -> name }} - Email: {{$user -> email}}</li>
+    @endforeach
 </ul>
 
 
