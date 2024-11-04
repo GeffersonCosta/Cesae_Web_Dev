@@ -3,7 +3,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { MeuComponenteComponent } from './components/meu-componente/meu-componente.component';
 import { OutroComponenteComponent } from './components/outro-componente/outro-componente.component';
 import { Ex01Component } from './exercicios/ex01/ex01.component';
-import { Ex02Component } from './exercicios/ex02/ex02.component';
+import { Ex2Component } from './exercicios/ex2/ex2.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +13,7 @@ import { Ex02Component } from './exercicios/ex02/ex02.component';
     MeuComponenteComponent,
     OutroComponenteComponent,
     Ex01Component,
-    Ex02Component,
+    Ex2Component,
     RouterLink,
     RouterLinkActive,
   ],
