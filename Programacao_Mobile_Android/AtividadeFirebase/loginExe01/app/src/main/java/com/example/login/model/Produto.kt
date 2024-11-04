@@ -1,9 +1,9 @@
 package com.example.login.model
 
-class Produto(var nome: String, var peso: Double, var valor: Double) {
+class Produto(var idProduto: Int, var nome: String) {
 
 
     override fun toString(): String {
-        return "Produto: "+nome + " Peso: "+ peso+" KG  Valor: "+ valor+"€"
+        return  idProduto.toString()+". "+nome;
     }
 }

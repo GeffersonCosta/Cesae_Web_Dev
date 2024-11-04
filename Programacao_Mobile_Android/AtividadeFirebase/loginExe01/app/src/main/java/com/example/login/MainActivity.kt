@@ -23,17 +23,22 @@ class MainActivity : AppCompatActivity() {
         binding.buttonLogin.setOnClickListener{
             val email = binding.editEmail.text.toString();
             val password = binding.editPassword.text.toString();
+            if(!email.isEmpty() && !password.isEmpty()){
+                auth.signInWithEmailAndPassword(email, password)
+                    .addOnSuccessListener {
+                        Toast.makeText(this, "Login efetuado", Toast.LENGTH_LONG).show()
+                        val i: Intent = Intent(this, ListaProdutosActivity::class.java)
+                        i.putExtra("email", email)
+                        startActivity(i)
+                    }
+                    .addOnFailureListener{
+                        Toast.makeText(this, "Erro: Utilizador não localizado", Toast.LENGTH_LONG).show()
+                    }
+            }else{
+                Toast.makeText(this, "Erro no login: Digite Username e Password", Toast.LENGTH_LONG).show()
+            }
 
-               auth.signInWithEmailAndPassword(email, password)
-                .addOnSuccessListener {
-                    Toast.makeText(this, "Login efetuado", Toast.LENGTH_LONG).show()
-                    val i: Intent = Intent(this, ListaProdutosActivity::class.java)
-                    i.putExtra("email", email)
-                    startActivity(i)
-                }
-                .addOnFailureListener{
-                    Toast.makeText(this, "Erro ao efetuar login", Toast.LENGTH_LONG).show()
-                }
+
         }
 
 

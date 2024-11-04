@@ -11,38 +11,42 @@ use Symfony\Component\HttpFoundation\Response;
 class UserController extends Controller
 {
     public function users(){
-        $cesaeInfo = $this -> getCesaeInfo();
-        $users = $this-> getAllUsersFromArray();
-        /*dd($users);*/
-        return view('users.all_users', compact('cesaeInfo','users'));
+        // $cesaeInfo = $this -> getCesaeInfo();
+        $users = $this-> getAllUsersFromDataBase();
+        // return view('users.all_users', compact('users, cesaeInfo'));
+        return view('users.all_users', compact('users'));
       }
 
-    private function getCesaeInfo(){
-       return $cesaeInfo = [
-            'name' => 'Cesae',
-            'address' => 'Rua Ciríaco Cardoso 186, 4150-212 Porto',
-            'email' => 'cesae@cesae.pt'
-        ];
-    }
-    private function getAllUsersFromArray(){
-       return $users = [
-            ['id' => 1, 'name' => 'Joana', 'email' => 'Joana@gmail.com'],
-            ['id' => 2, 'name' => 'Gefferson', 'email' => 'Gefferson@gmail.com'],
-            ['id' => 3, 'name' => 'Henrique', 'email' => 'Henrique@gmail.com'],
-        ];
-    }
+    // private function getCesaeInfo(){
+    //    return $cesaeInfo = [
+    //         'name' => 'Cesae',
+    //         'address' => 'Rua Ciríaco Cardoso 186, 4150-212 Porto',
+    //         'email' => 'cesae@cesae.pt'
+    //     ];
+    // }
+    // private function getAllUsersFromArray(){
+    //   $users = User::all();
+
+    //   return view('users.all_users', compact('users'));
+
+    // }
+
+
+    public function getAllUsersFromDataBase(){
+        $users = User::all();
+        return $users;
+      }
+
     public function insertUser(){
 
-        DB::table('users')->insert([
-            'name' => "henrique181",
-            'email' => "gefferson202@gmail.com",
-            'password' => "abcfe1234ab"
-        ]);
+        // DB::table('users')->insert([
+        //     'name' => "henrique182",
+        //     'email' => "gefferson232@gmail.com",
+        //     'password' => "abcfe1234ab"
+        // ]);
 
-     $users = DB::table('users')
-       -> get();
-
-      return view("users.insert-user", compact('users'));
+    //   $users = User::all();
+    //   return view("users.insert-user", compact("users"));
 
 
 
@@ -71,6 +75,9 @@ class UserController extends Controller
         // -> delete();
 
  }
+
+
+
 }
 
 

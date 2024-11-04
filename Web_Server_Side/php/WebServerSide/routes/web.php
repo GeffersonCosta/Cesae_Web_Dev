@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\IndexController;
 
@@ -20,9 +21,9 @@ Route::get('/helloworld/{name}', function ($name) {
     return "<h1>Hello ".$name."</h1>";
 });
 
-Route::get('/users', function () {
-   return view('users.all_users');
-})->name('users.all');
+// Route::get('/users', function () {
+//    return view('users.all_users');
+// })->name('users.all');
 
 Route::get('/newUsers', function(){
     return view('newUsers.usersNew');
@@ -31,12 +32,9 @@ Route::get('/newUsers', function(){
  Route::get('/home', [IndexController::class,'home'])->name('homepage');
  Route::get('/users', [UserController::class, 'users'])->name('users.all');
  Route::get('/', [IndexController::class, 'welcome'])->name('welcome');
-
-
+ Route::get('/task', [TaskController::class, 'allTasks'])->name('allTask');
  Route::get('/users/insert-user', [UserController::class, 'insertUser'])->name('Inserir_User');
-
-
-
+ Route::get('/users_show/{id}', [UserController::class, 'viewUser'])->name('users.show');
 //rota de fallback, onde o user cai quando clica numa rota que não está registada
 
 Route::fallback(function(){

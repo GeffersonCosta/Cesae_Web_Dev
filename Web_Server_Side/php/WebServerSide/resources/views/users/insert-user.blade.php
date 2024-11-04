@@ -3,11 +3,11 @@
 
 
 <h1>Usuário inserido no banco de dados</h1>
-<ul>
+{{-- <ul>
     @foreach ($users as $user)
-            <li>Nome: {{$user -> name }} - Email: {{$user -> email}}</li>
+            <li>Nome: {{$user -> name }}</li>
     @endforeach
-</ul>
+</ul> --}}
 
 
 @endsection

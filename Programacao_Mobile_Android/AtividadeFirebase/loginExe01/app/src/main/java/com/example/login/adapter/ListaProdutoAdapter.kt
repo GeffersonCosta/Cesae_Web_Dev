@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.login.R
 import com.example.login.model.Produto
 
-class ListaProdutoAdapter(val listaProdutoMock: ArrayList<Produto>) : RecyclerView.Adapter<ListaProdutoAdapter.ListaViewHolder>(){
+class ListaProdutoAdapter(var listaProdutoMock: ArrayList<Produto>) : RecyclerView.Adapter<ListaProdutoAdapter.ListaViewHolder>(){
 
     class ListaViewHolder(ItemView: View): RecyclerView.ViewHolder(ItemView){
         val textView: TextView = itemView.findViewById(R.id.text_modelo)
@@ -24,10 +24,15 @@ class ListaProdutoAdapter(val listaProdutoMock: ArrayList<Produto>) : RecyclerVi
         return listaProdutoMock.size
     }
 
+
     override fun onBindViewHolder(holder: ListaViewHolder, position: Int) {
         val produto = listaProdutoMock[position]
         holder.textView.setText(produto.toString())
 
+    }
+    fun updateList(novaLista: ArrayList<Produto>){
+        listaProdutoMock = novaLista
+        notifyDataSetChanged()
     }
 
 }

@@ -6,58 +6,89 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#4B7B9D"
     tools:context=".ListaProdutosActivity">
+
 
     <TextView
         android:id="@+id/text_Titulo"
         android:layout_width="match_parent"
-        android:layout_marginTop="20dp"
-        android:textSize="20dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:gravity="center"
-        android:text="Lista de Produtos" />
+        android:text="Lista de Compras"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
-
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="40dp"
+    android:layout_gravity="center"
+    >
     <EditText
         android:id="@+id/edit_NomeProduto"
-        android:layout_width="match_parent"
+        android:layout_width="244dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:layout_marginTop="20dp"
-        android:hint="Adicione Produtos"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffffff"
+        android:hint="Nome do Produto"
         android:inputType="text"
         android:text="" />
-    <EditText
-        android:id="@+id/edit_Peso"
-        android:layout_width="match_parent"
+
+    <ImageView
+        android:id="@+id/imageView_AdicionarProduto"
+        android:layout_width="66dp"
+        android:layout_height="match_parent"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:clickable="true"
+        />
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="310dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginTop="0dp"
-        android:hint="Peso"
-        android:inputType="numberDecimal"
-        android:text="" />
-    <EditText
-        android:id="@+id/edit_Valor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginTop="0dp"
-        android:hint="Valor"
-        android:inputType="numberDecimal"
-        android:text="" />
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edit_RemoverProduto"
+            android:layout_width="244dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:hint="Remover Produto (número)"
+            android:inputType="number"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/image_RemoverProduto"
+            android:layout_width="69dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@android:drawable/ic_delete"
+            android:clickable="true"
+
+            />
+
+    </LinearLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_lista"
-        android:layout_width="match_parent"
+        android:layout_width="389dp"
         android:layout_height="181dp"
         android:layout_marginTop="50dp"
-        android:layout_marginBottom="20dp" />
+        android:scrollbars="vertical"
+        android:padding="20dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:background="#ffffff" />
 
-    <Button
-        android:id="@+id/button_AdicionarProduto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Adicionar Produto" />
+
 
 
 </LinearLayout>
