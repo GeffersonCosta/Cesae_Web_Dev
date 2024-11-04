@@ -9,7 +9,6 @@ import com.example.login.data.ListaProdutoMock
 import com.example.login.databinding.ActivityListaProdutosBinding
 import com.example.login.model.Produto
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 
 class ListaProdutosActivity : AppCompatActivity() {
@@ -99,18 +98,18 @@ class ListaProdutosActivity : AppCompatActivity() {
     }
 
 
-private fun updateId(userNumeroProduto:Int, emailUser: String){
+private fun updateId(userNumeroProduto: Int, emailUser: String){
     val produtos = db.collection("Usuario").document(emailUser).collection("produtos")
 
-    var cont = 0
+    var cont = 1
     produtos.get().addOnSuccessListener {querySnapshot ->
             for (documentSnapshot in querySnapshot) {
                     var updateIdProduto =  produtos.document(documentSnapshot.id)
-                    updateIdProduto.update("idProduto", 0)
-                    updateIdProduto.update("idProduto", FieldValue.increment(1+cont.toDouble()))
+                    updateIdProduto.update("idProduto", cont)
                 cont++
 
             }
+
         }
 
 
