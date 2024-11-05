@@ -46,6 +46,7 @@ class ListaProdutosActivity : AppCompatActivity() {
             }
             else{
                 val produtos = db.collection("Usuario").document(emailUser.toString()).collection("produtos").orderBy("idProduto")
+                
                 produtos.get().addOnSuccessListener {   querySnapshot ->
                     if(querySnapshot.isEmpty){
                      cont = 0
