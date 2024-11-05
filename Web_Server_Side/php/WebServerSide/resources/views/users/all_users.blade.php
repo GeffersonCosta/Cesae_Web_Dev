@@ -14,13 +14,12 @@
             </thead>
             <tbody>
                 @foreach ($users as $user)
-              {{dd($user)}}
               <tr>
                 <th scope="row">{{$user -> id}}</th>
                 <td>{{$user -> name}}</td>
                 <td>{{$user -> email}}</td>
-                {{-- <td><a href="{{route('users.show', $user->id)}}" class="btn btn-info">Ver</a></td> --}}
-                {{-- <td><a href="{{route('users.delete', $user->id)}}" class="btn btn-danger">Apagar</a></td> --}}
+                <td><a href="{{route('users.show', $user->id)}}" class="btn btn-info">Ver</a></td>
+                <td><a href="{{route('users.delete', $user->id)}}" class="btn btn-danger">Apagar</a></td>
               </tr>
               @endforeach
             </tbody>

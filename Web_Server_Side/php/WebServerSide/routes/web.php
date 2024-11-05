@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GiftController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\IndexController;
@@ -35,6 +36,10 @@ Route::get('/newUsers', function(){
  Route::get('/task', [TaskController::class, 'allTasks'])->name('allTask');
  Route::get('/users/insert-user', [UserController::class, 'insertUser'])->name('Inserir_User');
  Route::get('/users_show/{id}', [UserController::class, 'viewUser'])->name('users.show');
+ Route::get('/delete_user/{id}', [UserController::class, 'deleteUser'])->name('users.delete');
+Route::get('/gift',[GiftController::class, 'allGifts'])->name('gifts.gift');
+Route::get('/gift.show/{id}',[GiftController::class, 'giftShow'])->name('gifts.gift_show');
+Route::get('/gift.delete/{id}', [GiftController::class, 'giftDelete'])->name('gifts.gift_delete');
 //rota de fallback, onde o user cai quando clica numa rota que não está registada
 
 Route::fallback(function(){

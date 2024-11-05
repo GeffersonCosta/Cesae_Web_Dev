@@ -27,8 +27,9 @@
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="/users">Todos usuários</a></li>
                   <li><a class="dropdown-item" href="/task">Todas as tarefas</a></li>
+                  <li><a class="dropdown-item" href="/gift">Todas as prendas</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+
                 </ul>
               </li>
               <li class="nav-item">

@@ -39,11 +39,8 @@ class UserController extends Controller
 
     public function insertUser(){
 
-        // DB::table('users')->insert([
-        //     'name' => "henrique182",
-        //     'email' => "gefferson232@gmail.com",
-        //     'password' => "abcfe1234ab"
-        // ]);
+        DB::table('users')->insert(['name' => "henrique53", 'email' => "gefferson53@gmail.com", 'password' => "abcfe1234ab"],
+    );
 
     //   $users = User::all();
     //   return view("users.insert-user", compact("users"));
@@ -76,7 +73,17 @@ class UserController extends Controller
 
  }
 
+public function viewUser($id){
+    $users = User::where("id", $id)->first();
+   return view("users.show_user", compact("users"));
+}
 
+public function deleteUser($id){
+    // $serName = User::where("id", $id)->first();
+    User::where("id", $id) ->delete();
+    return back();
+
+}
 
 }
 

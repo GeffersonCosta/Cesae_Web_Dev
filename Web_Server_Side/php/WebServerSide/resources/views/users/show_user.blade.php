@@ -1,6 +1,6 @@
 @extends('layouts.femaster')
 
 @section('content')
-    <h4>Cucu sou os dados de um user {{ $user->name }}</h4>
-    <h6>{{ $user->email }}</h6>
+    <h4>Dados do usuário {{ $users->name }}</h4>
+    <h6>{{ $users->email }}</h6>
 @endsection
