@@ -30,9 +30,6 @@ class ListaProdutoAdapter(var listaProdutoMock: ArrayList<Produto>) : RecyclerVi
         holder.textView.setText(produto.toString())
 
     }
-    fun updateList(novaLista: ArrayList<Produto>){
-        listaProdutoMock = novaLista
-        notifyDataSetChanged()
-    }
+
 
 }

@@ -17,6 +17,7 @@ class ListaProdutosActivity : AppCompatActivity() {
     var cont = 0;
     val mock = ListaProdutoMock()
 
+
     private val binding by lazy {
         ActivityListaProdutosBinding.inflate(layoutInflater)
     }
@@ -73,36 +74,72 @@ class ListaProdutosActivity : AppCompatActivity() {
                         for (documentSnapshot in querySnapshot) {
                             idProduto = documentSnapshot.data?.get("idProduto").toString().toInt()
                             produtos.document(documentSnapshot.id).delete()
-                            updateId(nProduto, emailUser.toString())
+                            updateId(emailUser.toString())
                             var indexParaRemover = mock.listaProdutoMock.indexOfFirst { it.idProduto == nProduto}
                             mock.listaProdutoMock.removeAt(indexParaRemover)
                             binding.recyclerviewLista.adapter?.notifyItemRemoved(indexParaRemover)
 
-
                         }
+                        limparLista(emailUser.toString())
                     }
 
-            }else{
+            }
+
+            else{
                 Toast.makeText(this, "Insira um número", Toast.LENGTH_LONG).show()
             }
 
 
         }
 
-
-
-
-
-
-
     }
 
 
-private fun updateId(userNumeroProduto: Int, emailUser: String){
-    val produtos = db.collection("Usuario").document(emailUser).collection("produtos")
 
-    var cont = 1
-    produtos.get().addOnSuccessListener {querySnapshot ->
+        private fun limparLista(emailUser: String){
+            var index = 0
+            val produtos = db.collection("Usuario").document(emailUser.toString()).collection("produtos")
+            produtos.get().addOnSuccessListener {   querySnapshot ->
+                index = querySnapshot.size()-1
+                for(produto in querySnapshot){
+                    if(produto.data.isNotEmpty()){
+                        Toast.makeText(this, index.toString(), Toast.LENGTH_LONG).show()
+                        mock.listaProdutoMock.removeAt(index)
+                        binding.recyclerviewLista.adapter?.notifyItemRemoved(index)
+                        index--
+                        if(index == 0){
+                            updateLista(true, emailUser)
+                        }
+                    }
+                }
+
+            }
+        }
+
+
+    private fun updateLista(boolean: Boolean, emailUser: String){
+        if(boolean){
+            val produtos = db.collection("Usuario").document(emailUser).collection("produtos")
+            produtos.get().addOnSuccessListener {querySnapshot ->
+                for (produto in querySnapshot){
+                    var idProdutoDatabase = produto.data.get("idProduto").toString().toInt()
+                    var nome = produto.data.get("nome").toString()
+                    mock.listaProdutoMock.add(Produto(idProdutoDatabase,nome))
+                    binding.recyclerviewLista.layoutManager = LinearLayoutManager(this)
+                    binding.recyclerviewLista.adapter = ListaProdutoAdapter(mock.listaProdutoMock)
+                }
+
+            }
+
+        }
+    }
+
+
+    private fun updateId(emailUser: String){
+        val produtos = db.collection("Usuario").document(emailUser).collection("produtos")
+
+        var cont = 1
+        produtos.get().addOnSuccessListener {querySnapshot ->
             for (documentSnapshot in querySnapshot) {
                     var updateIdProduto =  produtos.document(documentSnapshot.id)
                     updateIdProduto.update("idProduto", cont)
@@ -110,12 +147,8 @@ private fun updateId(userNumeroProduto: Int, emailUser: String){
 
             }
 
+
         }
-
-
-
-
-
 
 }
 
