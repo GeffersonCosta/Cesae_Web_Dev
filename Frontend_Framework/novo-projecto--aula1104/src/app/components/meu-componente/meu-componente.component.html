@@ -1,0 +1,18 @@
+<p>meu-componente works!</p>
+
+<h2>Olá eu sou o {{ meuNome }} 😉</h2>
+
+<p
+  [style.color]="corDeTexto"
+  [style.backgroundColor]="corDeFundo">
+  {{ mensagem }}
+</p>
+
+<p>Idade: {{ idade + 2 }}</p>
+
+<button [disabled]="!estaAtivado">oLá oLá</button>
+<button (click)="onClick()">alterar estado</button>
+<input type="color" name="" id="" [(ngModel)]="corDeFundo" />
+
+<br /><br /><br />
+<img [src]="imagem" alt="" />
