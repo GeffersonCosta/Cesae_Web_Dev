@@ -5,73 +5,43 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User;
+use Illuminate\Support\Facades\Hash;
 use Symfony\Component\HttpFoundation\Response;
 
 
 class UserController extends Controller
 {
+
     public function users(){
-        // $cesaeInfo = $this -> getCesaeInfo();
         $users = $this-> getAllUsersFromDataBase();
-        // return view('users.all_users', compact('users, cesaeInfo'));
         return view('users.all_users', compact('users'));
       }
 
-    // private function getCesaeInfo(){
-    //    return $cesaeInfo = [
-    //         'name' => 'Cesae',
-    //         'address' => 'Rua Ciríaco Cardoso 186, 4150-212 Porto',
-    //         'email' => 'cesae@cesae.pt'
-    //     ];
-    // }
-    // private function getAllUsersFromArray(){
-    //   $users = User::all();
-
-    //   return view('users.all_users', compact('users'));
-
-    // }
-
-
-    public function getAllUsersFromDataBase(){
+      public function getAllUsersFromDataBase(){
         $users = User::all();
         return $users;
       }
 
-    public function insertUser(){
 
-        DB::table('users')->insert(['name' => "henrique53", 'email' => "gefferson53@gmail.com", 'password' => "abcfe1234ab"],
-    );
-
-    //   $users = User::all();
-    //   return view("users.insert-user", compact("users"));
-
-
-
-      /*DB::table('users')->insert([
-            'name' => "henrique150",
-            'email' => "gefferson200@gmail.com",
-            'password' => "gefferson123469"
-        ]);
-        return view("users.insert-user");*/
-     //-------------------------------------------------------
-        // Db::table('users')
-        // -> updateOrInsert(
-        //     [
-        //         'email' => 'Pedro@gmail.com',
-        //         'password' => 'Pedro123456'
-        //     ],
-        //     [
-        //         'name' => 'Pedro',
-        //         'updated_at' => now(),
-        //         'password' => 'abx123456'
-        //     ],
-        //     );}
-
-        // db::table('users')
-        // -> where('id', 10)
-        // -> delete();
-
+    public function returnViewAddUser(){
+        return view("users.add_user");
  }
+
+ public function createUser(Request $request){
+    $request -> validate([
+        'name' => 'string|required|max:20',
+        'email' => 'email|required|unique:users',
+        'password' => 'min:6|required',
+    ]);
+
+   User::insert([
+    'name' => $request -> name,
+    'email' => $request -> email,
+    'password' => Hash::make($request -> password)
+   ]);
+
+   return redirect()->route("users.all")->with('message', 'Usuário adicionado com sucesso');
+}
 
 public function viewUser($id){
     $users = User::where("id", $id)->first();
@@ -82,7 +52,6 @@ public function deleteUser($id){
     // $serName = User::where("id", $id)->first();
     User::where("id", $id) ->delete();
     return back();
-
 }
 
 }

@@ -33,9 +33,18 @@ Route::get('/newUsers', function(){
  Route::get('/home', [IndexController::class,'home'])->name('homepage');
  Route::get('/users', [UserController::class, 'users'])->name('users.all');
  Route::get('/', [IndexController::class, 'welcome'])->name('welcome');
- Route::get('/task', [TaskController::class, 'allTasks'])->name('allTask');
- Route::get('/users/insert-user', [UserController::class, 'insertUser'])->name('Inserir_User');
+
+ Route::get('/task', [TaskController::class, 'allTasks'])->name('all.Task');
+ Route::get('/task_add', [TaskController::class, 'returnViewAddTask'])->name('task.add');
+ Route::post('/task_create', [TaskController::class, 'createTask'])->name('task.create');
+
  Route::get('/users_show/{id}', [UserController::class, 'viewUser'])->name('users.show');
+
+ Route::get('/users_add', [UserController::class, 'returnViewAddUser'])->name('users.add');
+ Route::post('users_create', [UserController::class, 'createUser'])->name('users.create');
+
+
+
  Route::get('/delete_user/{id}', [UserController::class, 'deleteUser'])->name('users.delete');
 Route::get('/gift',[GiftController::class, 'allGifts'])->name('gifts.gift');
 Route::get('/gift.show/{id}',[GiftController::class, 'giftShow'])->name('gifts.gift_show');

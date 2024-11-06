@@ -27,7 +27,9 @@
     <ul>
         <li><a href="{{route('welcome')}}">Welcome</a></li>
         <li><a href="{{route('users.all')}}">all users</a></li>
-        <li><a href="{{route('Inserir_User')}}">add users</a></li>
-        <li><a href="{{route('allTask')}}">Todas as Tarefas</a></li>
+        <li><a href="{{route('users.add')}}">add users</a></li>
+        <li><a href="{{route('task.add')}}">Adicionar Tarefa</a></li>
+        <li><a href="{{route('all.Task')}}">Todas as Tarefas</a></li>
+
     </ul>
     @endsection

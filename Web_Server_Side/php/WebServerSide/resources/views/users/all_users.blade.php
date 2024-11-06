@@ -2,13 +2,17 @@
 @section('content')
 
         <h3>Sou uma blade para todos os users</h3><br><br>
-
+        @if(session('message'))
+        <div class="alert alert-success">{{session('message')}}</div>
+        @endif
         <table class="table">
             <thead>
               <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
                 <th scope="col"></th>
               </tr>
             </thead>
@@ -18,6 +22,7 @@
                 <th scope="row">{{$user -> id}}</th>
                 <td>{{$user -> name}}</td>
                 <td>{{$user -> email}}</td>
+                <td>{{$user -> password}}</td>
                 <td><a href="{{route('users.show', $user->id)}}" class="btn btn-info">Ver</a></td>
                 <td><a href="{{route('users.delete', $user->id)}}" class="btn btn-danger">Apagar</a></td>
               </tr>

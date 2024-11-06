@@ -25,15 +25,13 @@
                   Todos os Links
                 </a>
                 <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/users_add">Adicionar usuário</a></li>
                   <li><a class="dropdown-item" href="/users">Todos usuários</a></li>
+                  <li><a class="dropdown-item" href="/task_add">Adicionar Tarefa</a></li>
                   <li><a class="dropdown-item" href="/task">Todas as tarefas</a></li>
                   <li><a class="dropdown-item" href="/gift">Todas as prendas</a></li>
                   <li><hr class="dropdown-divider"></li>
-
                 </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
