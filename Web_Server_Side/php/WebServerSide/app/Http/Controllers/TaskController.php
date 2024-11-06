@@ -8,9 +8,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User;
 
 
-
-
-
 class TaskController extends Controller
 {
 
@@ -34,8 +31,6 @@ public function createTask(Request $request){
     ]);
     return redirect()->route("all.Task");
 }
-
-
 
 public function returnViewAddTask(){
    $users = User::all();

@@ -21,7 +21,7 @@
         <td>{{$gifts -> value_predicted}}</td>
         <td>{{$gifts -> value_spent}}€</td>
         <td>{{$userName -> username}}</td>
-        <td>{{$gifts -> value_predicted - $gifts -> value_spent}}€</td>
+        <td>{{$valorTotal}}€</td>
         <td></td>
         <td></td>
       </tr>

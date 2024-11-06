@@ -19,9 +19,9 @@ class GiftController extends Controller
     public function giftShow($id){
         $userName = db::table("gifts")->join('users','users.id', '=', 'gifts.user_id')->select("gifts.*","users.name as username")->first();
         $gifts = Gift::where('id', $id)->first();
-       
-         return view("gifts.gift_show", compact("gifts","userName"));
+        $valorTotal = $gifts["value_predicted"]-$gifts["value_spent"];
 
+         return view("gifts.gift_show", compact("gifts","userName", "valorTotal"));
     }
     public function giftDelete($id){
         Gift::where("id", $id)->delete();
