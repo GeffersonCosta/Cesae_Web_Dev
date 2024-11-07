@@ -4,6 +4,7 @@
 <h1>Todas as Tarefas</h1>
 
 <br><br>
+<a class="btn btn-primary" href="{{route('task.add')}}">Adicionar Nova Tarefa</a><br><br>
 <table class="table">
     <thead>
       <tr>

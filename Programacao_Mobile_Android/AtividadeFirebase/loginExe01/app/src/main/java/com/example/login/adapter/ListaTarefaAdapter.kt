@@ -1,15 +1,16 @@
-package com.example.login
+package com.example.login.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.login.model.Produto
+import com.example.login.R
+import com.example.login.model.ListaTarefa
 
-class ListaTarefaAdapter(val listaTarefa: ArrayList<Produto>):RecyclerView.Adapter<ListaTarefaAdapter.ListaTarefaViewHolder>(){
+class ListaTarefaAdapter(val listaTarefa: ArrayList<ListaTarefa>):RecyclerView.Adapter<ListaTarefaAdapter.ListaTarefaViewHolder>(){
     class ListaTarefaViewHolder(ItemView: View):RecyclerView.ViewHolder(ItemView){
-        val textView: TextView = itemView.findViewById(R.id.text_modelo)
+        val textView: TextView = itemView.findViewById(R.id.lista_Tarefa)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListaTarefaViewHolder {

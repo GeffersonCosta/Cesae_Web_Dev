@@ -28,19 +28,35 @@ class UserController extends Controller
  }
 
  public function createUser(Request $request){
-    $request -> validate([
-        'name' => 'string|required|max:20',
-        'email' => 'email|required|unique:users',
-        'password' => 'min:6|required',
-    ]);
+    // dd($request -> id);
+    $action = '';
 
-   User::insert([
-    'name' => $request -> name,
-    'email' => $request -> email,
-    'password' => Hash::make($request -> password)
-   ]);
+    if(isset($request->id)){
+        $action = 'atualizado';
+        User::where('id', $request->id)
+        -> update([
+            'name' => $request -> name,
+            'nif' => $request -> nif,
+            'address' => $request -> address,
+        ]);
+    }else{
+            $action = 'inserido';
+            $request -> validate([
+                'name' => 'string|required|max:20',
+                'email' => 'email|required|unique:users',
+                'password' => 'min:6|required',
+            ]);
+           User::insert([
+            'name' => $request -> name,
+            'email' => $request -> email,
+            'password' => Hash::make($request -> password)
+        ]);
 
-   return redirect()->route("users.all")->with('message', 'Usuário adicionado com sucesso');
+    }
+
+
+
+   return redirect()->route("users.all")->with('message', 'Usuário ' .$action. ' com sucesso');
 }
 
 public function viewUser($id){

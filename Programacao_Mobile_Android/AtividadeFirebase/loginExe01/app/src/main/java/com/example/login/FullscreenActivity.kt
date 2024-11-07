@@ -7,7 +7,10 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.login.adapter.ListaTarefaAdapter
+import com.example.login.data.ListaTarefaMock
 import com.example.login.databinding.ActivityFullscreenBinding
+import com.example.login.model.ListaTarefa
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -15,17 +18,17 @@ import com.example.login.databinding.ActivityFullscreenBinding
  */
 class FullscreenActivity : AppCompatActivity() {
 
-   /* private val binding by lazy {
-        ActivityMainBinding.inflate(layoutInflater)
-    }*/
-
-   private lateinit var binding: ActivityFullscreenBinding
+    private val binding by lazy {
+        ActivityFullscreenBinding.inflate(layoutInflater)
+    }
+   private var mock = ListaTarefaMock()
+   /*private lateinit var binding: ActivityFullscreenBinding*/
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        var mockTarefa = ListaTarefaMock()
-        binding = ActivityFullscreenBinding.inflate(layoutInflater)
+
+        /*binding = ActivityFullscreenBinding.inflate(layoutInflater)*/
 
         setContentView(binding.root)
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.R){
@@ -35,9 +38,12 @@ class FullscreenActivity : AppCompatActivity() {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN
             )
         }
-        mockTarefa.listaTarefaMock.add(ListaTarefa(1, "Hello"))
+
+        var idTarefa = 4
+        var descricao = "Limpar tudo"
+       mock.listaTarefaMock.add(ListaTarefa(idTarefa, descricao))
         binding.recyclerviewListaTarefa.layoutManager = LinearLayoutManager(this)
-        binding.recyclerviewListaTarefa.adapter = ListaTarefaAdapter(mockTarefa.listaTarefaMock)
+        binding.recyclerviewListaTarefa.adapter = ListaTarefaAdapter(mock.listaTarefaMock)
 
     }
 }
