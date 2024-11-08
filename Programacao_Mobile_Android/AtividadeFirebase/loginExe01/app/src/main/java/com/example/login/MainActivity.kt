@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
                 auth.signInWithEmailAndPassword(email, password)
                     .addOnSuccessListener {
                         Toast.makeText(this, "Login efetuado", Toast.LENGTH_LONG).show()
-                        val i: Intent = Intent(this, ListaProdutosActivity::class.java)
+                        val i: Intent = Intent(this, FullscreenActivity::class.java)
                         i.putExtra("email", email)
                         startActivity(i)
                     }
