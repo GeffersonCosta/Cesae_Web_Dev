@@ -7,4 +7,10 @@
     <color name="light_blue_A200">#FF40C4FF</color>
     <color name="light_blue_A400">#FF00B0FF</color>
     <color name="black_overlay">#66000000</color>
+    <color name="cor1">#4F2B71</color>
+    <color name="cor1variacao">#2E1347</color>
+    <color name="cor2">#1A3E6F</color>
+    <color name="cor2variacao">#0E284D</color>
+    <color name="cor3">#3B8569</color>
+    <color name="cor3variacao">#062F20</color>
 </resources>

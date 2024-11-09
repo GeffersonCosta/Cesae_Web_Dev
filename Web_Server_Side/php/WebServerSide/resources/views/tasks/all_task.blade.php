@@ -22,6 +22,7 @@
         <td>{{$task -> name}}</td>
         <td>{{$task -> description}}</td>
         <td>{{$task -> userName}}</td>
+        
       </tr>
         @endforeach
     </tbody>

@@ -13,13 +13,25 @@ class UserController extends Controller
 {
 
     public function users(){
-        $users = $this-> getAllUsersFromDataBase();
+
+        $search = request()->query('search') ? request()->query('search') : "";
+        $users = $this-> getAllUsersFromDataBase($search);
+
         return view('users.all_users', compact('users'));
       }
 
-      public function getAllUsersFromDataBase(){
-        $users = User::all();
+      public function getAllUsersFromDataBase($search){
+
+        $users = DB::table('users');
+        if($search){
+
+            $users = $users -> where('name', 'LIKE', "%$search%");
+            $users = $users -> orWhere('email', $search);
+        }
+        $users = $users -> get();
+
         return $users;
+
       }
 
 
