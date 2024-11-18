@@ -23,7 +23,7 @@
     <p>Nome: {{$info['name']}}</p>
     <p>Horas: {{$info['hours']}}</p>
 
-    <img src="{{asset('imagens/carro.jpg')}}" alt="">
+    <img class="img_home" src="{{asset('imagens/carro.jpg')}}" alt="">
     <ul>
         <li><a href="{{route('welcome')}}">Welcome</a></li>
         <li><a href="{{route('users.all')}}">all users</a></li>

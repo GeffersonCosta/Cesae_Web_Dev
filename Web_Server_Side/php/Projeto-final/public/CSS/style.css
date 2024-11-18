@@ -1,8 +1,11 @@
-body{
+body {
     background-color: rgb(227, 180, 255);
 }
 
-a{
+a {
     font-size: 1rem;
+}
 
+.img_home {
+    width: 100%;
 }

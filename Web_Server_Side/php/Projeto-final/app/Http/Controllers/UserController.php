@@ -68,7 +68,7 @@ class UserController extends Controller
 
 
 
-   return redirect()->route("users.all")->with('message', 'Usuário ' .$action. ' com sucesso');
+   return redirect()->route('login')->with('message', 'Usuário ' .$action. ' com sucesso');
 }
 
 public function viewUser($id){

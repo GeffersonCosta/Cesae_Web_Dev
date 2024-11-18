@@ -9,7 +9,7 @@
 
         <form method="GET">
             <input value="{{request()->query('search')}}" type="text" name="search" id="" placeholder="Pesquisar">
-            <button class="btn btn-secondary">Produrar</button>
+            <button class="btn btn-secondary">Procurar</button>
         </form>
         <table class="table">
             <thead>
