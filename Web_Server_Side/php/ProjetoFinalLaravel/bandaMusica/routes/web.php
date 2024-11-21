@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BandController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\DashboardController;
+
+
 
 
 
@@ -34,3 +37,6 @@ Route::get('/update_album/{id}',[AlbumController::class, 'updateAlbum'])->name('
 /**Users*/
 Route::get('/users_add', [UserController::class, 'returnViewAddUser'])->name('users.add');
 Route::post('users_create', [UserController::class, 'createUser'])->name('users.create');
+
+/**Dashboard*/
+Route::get('/dashboard', [DashboardController::class, 'returnViewDashboard'])->name('dashboard');

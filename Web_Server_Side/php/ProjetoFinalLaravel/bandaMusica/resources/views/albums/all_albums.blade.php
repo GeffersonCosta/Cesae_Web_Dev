@@ -25,8 +25,10 @@
             @auth
             <td>
                 <a href="{{route('update.album', $album -> id)}}" class="btn btn-success">Editar</a>
+                @if(Auth::User()->user_type == 0)
                 <a href="{{route('delete.Album', $album -> id)}}" class="btn btn-danger">Apagar</a>
                 {{-- <a href="{{route('users.delete', $user ->id)}}" class="btn btn-danger">Apagar</a> --}}
+                @endif
             </td>
             @endauth
             </tr>

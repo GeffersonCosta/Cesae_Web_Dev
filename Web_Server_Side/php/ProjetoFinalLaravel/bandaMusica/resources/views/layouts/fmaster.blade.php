@@ -28,23 +28,22 @@
                         <a class="nav-link active" aria-current="page" href="{{route('all.bands')}}">Todas as Bandas</a>
                     </li>
                     @auth
+                    @if(Auth::User()->user_type == 0)
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('add.bands')}}">Adicionar Bandas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('add.albums')}}">Adicionar álbuns</a>
                     </li>
+                    @endif
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('dashboard')}}">Dashboard</a>
+                    </li>
                     @endauth
                 </ul>
                 @if (Route::has('login'))
                 <nav class="-mx-3 flex flex-1 justify-end">
                 @auth
-                        <a
-                            href="{{ url('/dashboard') }}"
-                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                        >
-                            Dashboard
-                        </a>
                         <h6>Olá {{Auth::user()->name}}</h6>
                         <form method="POST" action="{{route('logout')}}">
                             @csrf
