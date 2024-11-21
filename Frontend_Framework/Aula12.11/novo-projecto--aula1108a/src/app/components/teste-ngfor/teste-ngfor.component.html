@@ -1,0 +1,73 @@
+<h2>Estruturas de repetição</h2>
+<hr />
+
+<div>
+  <h3>For</h3>
+
+  (1)
+  <ul>
+    <li *ngFor="let item of frutas">
+      {{ item }}
+    </li>
+  </ul>
+
+  (1_2)
+  <ul>
+    <li *ngFor="let item of frutas; index as i">
+      {{ item }} ({{ i }})
+    </li>
+  </ul>
+
+  (2)
+  <ul>
+    <ng-template ngFor let-item [ngForOf]="frutas" let-i="index">
+      <li>{{ item }} ({{ i }})</li>
+    </ng-template>
+  </ul>
+
+  (1_3; first item)
+  <ul>
+    <li *ngFor="let item of frutas; first as ePrimeiro">
+      {{ item }}
+      <b *ngIf="ePrimeiro">(É o primeiro)</b>
+    </li>
+  </ul>
+
+  (3)
+  <ul>
+    @for (item of frutas; track $index) {
+    <li>{{ item }} ({{ $index }})</li>
+    } @empty {
+    <li>A lista está vazia!</li>
+    }
+  </ul>
+</div>
+<hr />
+
+<div>
+  <h3>Ex</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>nome</th>
+        <th>esp</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (item of animais; track item.id) {
+        <tr>
+          <td>{{ item.id }}</td>
+          <td>{{ item.nome }}</td>
+          <td>{{ item.espece }}</td>
+        </tr>
+      }
+    </tbody>
+    <tfoot>
+      <tr>
+        <td [colSpan]="3">lista de animais</td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+<hr />

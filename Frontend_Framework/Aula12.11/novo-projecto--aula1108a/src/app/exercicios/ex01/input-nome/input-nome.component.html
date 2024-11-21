@@ -1,0 +1,7 @@
+<div>
+  <label for="nome">Alterar nome:</label>
+  <!--input type="text" id="nome" [(ngModel)]="nome" (change)="mudarNome()" /-->
+  
+  <!-- fix: atualizar o nome sempre que o utilizador interage com o input -->
+  <input type="text" id="nome" [(ngModel)]="nome" (input)="mudarNome()" />
+</div>

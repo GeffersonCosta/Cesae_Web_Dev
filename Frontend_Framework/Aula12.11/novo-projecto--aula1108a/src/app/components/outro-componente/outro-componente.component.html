@@ -1,0 +1,9 @@
+<p>outro-componente works!</p>
+
+<div style="background-color: aqua">
+  <h3>Contador:</h3>
+  <p>
+    <span>{{ contagem }}</span>
+    <app-contador [aux]="contagem" (mudancaNoContador)="atualizar($event)" />
+  </p>
+</div>

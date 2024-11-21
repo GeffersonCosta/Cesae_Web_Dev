@@ -14,10 +14,10 @@
 
 COMANDOS LARAVEL
 -> php artisan serve (iniciar o Servidor)
-
+-> php artisan make:model NomedoModel
 -> php artisan make:controller DashboardController (criar um controller)
 -> php artisan make:controller UserController -r (controller com recursos)
-
+  
 -> php artisan migrate (corre as migrações novas)
 -> php artisan migrate:status
 -> php artisan make:migration nomeDaMigração (corre a migração)
@@ -29,7 +29,7 @@ COMANDOS LARAVEL
 Route::get('/home_contacts', [HomeController::class, 'index'])->name('index.contacts');
 
 //retornar uma view com dados
-return view ('nameofview', compact('contacts');
+return view ('nameofview', compact('contacts');1
 
 
 BASES DE DADOS
@@ -115,7 +115,4 @@ php artisan migrate
 
 
 
-//formas de debug
 
-dd();
-var_dump();

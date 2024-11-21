@@ -1,0 +1,28 @@
+<div style="padding:5em 20em 20em 20em;">
+  <form #formAnimal (submit)="animalData()">
+    <div class="mb-3">
+      <label for="nome" class="form-label">Nome:</label>
+      <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="novoAnimal.nome" required [minLength]="3">
+    </div>
+
+    <div class="mb-3">
+      <label for="especie" class="form-label">Espécie:</label>
+      <input type="text" class="form-control" id="especie" name="especie" [(ngModel)]="novoAnimal.especie" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="dataNascimento" class="form-label">Data de Nascimento:</label>
+      <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" [(ngModel)]="novoAnimal.dataNascimento" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="cor" class="form-label">Cor:</label>
+      <input type="text" class="form-control" id="cor" name="cor" [(ngModel)]="novoAnimal.cor" disabled>
+    </div>
+    <br>
+    <button type="reset" class="btn btn-primary">Limpar</button>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>

@@ -1,0 +1,7 @@
+<div>
+  <label for="idade">Alterar idade:</label>
+  <!--input type="number" id="idade" [(ngModel)]="idade" (keydown)="mudarIdade()" /-->
+  
+  <!-- fix: atualizar a idade quando se usa o UI do input -->
+  <input type="number" id="idade" [(ngModel)]="idade" (input)="mudarIdade()" />
+</div>

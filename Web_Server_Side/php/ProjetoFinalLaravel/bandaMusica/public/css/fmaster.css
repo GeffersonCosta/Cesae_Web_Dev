@@ -1,0 +1,16 @@
+h1 {
+    padding-top: 20px;
+}
+table {
+    margin-top: 50px;
+}
+form img {
+    width: 20%;
+    height: 10%;
+    border-radius: 5px;
+}
+table img {
+    width: 20%;
+    height: 4%;
+    border-radius: 5px;
+}

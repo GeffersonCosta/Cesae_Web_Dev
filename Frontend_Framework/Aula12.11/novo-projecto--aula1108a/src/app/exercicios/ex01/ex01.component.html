@@ -1,0 +1,16 @@
+<div class="dados-utilizador">
+  <h3>Dados do utilizador:</h3>
+  <ul>
+    <li><b>Nome:</b> {{ nomeUtilizador }}</li>
+    <li><b>Idade:</b> {{ idadeUtilizador }}</li>
+  </ul>
+
+  <app-input-nome
+    [nome]="nomeUtilizador"
+    (mudacaNoNome)="atualizarNome($event)"
+  />
+  <app-input-idade
+    [idade]="idadeUtilizador"
+    (mudacaNaIdade)="atualizarIdade($event)"
+  />
+</div>
